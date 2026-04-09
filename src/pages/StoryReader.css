@@ -230,31 +230,31 @@
 
 /* ✅ РЕАЛЬНЫЕ ИКОНКИ ЧЕРЕЗ URL */
 .choice-card[data-icon="shield"] .choice-icon {
-    background-image: url('/images/icons/shield.png');
+    background-image: url('/icons/shield.png');
 }
 
 .choice-card[data-icon="case"] .choice-icon {
-    background-image: url('/images/icons/case.png');
+    background-image: url('/icons/case.png');
 }
 
 .choice-card[data-icon="headphones"] .choice-icon {
-    background-image: url('/images/icons/headphones.png');
+    background-image: url('/icons/headphones.png');
 }
 
 .choice-card[data-icon="document"] .choice-icon {
-    background-image: url('/images/icons/document.png');
+    background-image: url('/icons/document.png');
 }
 
 .choice-card[data-icon="piggy"] .choice-icon {
-    background-image: url('/images/icons/piggy.png');
+    background-image: url('/icons/piggy.png');
 }
 
 .choice-card[data-icon="heart"] .choice-icon {
-    background-image: url('/images/icons/heart.png');
+    background-image: url('/icons/heart.png');
 }
 
 .choice-card[data-icon="eye"] .choice-icon {
-    background-image: url('/images/icons/eye.png');
+    background-image: url('/icons/eye.png');
 }
 
 .choice-price {
@@ -303,11 +303,11 @@
 }
 
 .widget-btn[data-icon="chat"] {
-    background-image: url('/images/icons/chat.png');
+    background-image: url('/icons/chat.png');
 }
 
 .widget-btn[data-icon="phone"] {
-    background-image: url('/images/icons/phone.png');
+    background-image: url('/icons/phone.png');
 }
 
 .story-progress {

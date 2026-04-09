@@ -10,11 +10,11 @@
     {
       id: 1,
       title: '🏪 Магазин электроники',
-      bg: '/images/stories/0+/razbilsya-telefon/shop-bg.jpg',
+      bg: 'images/stories/0+/razbilsya-telefon/shop-bg.jpg',
       characters: [
-        { name: 'Лев', img: '/images/characters/lev/lev.png', side: 'left' },
-        { name: 'Екатерина', img: '/images/characters/ekaterina/ekaterina.png', side: 'right' },
-        { name: 'Николай', img: '/images/characters/nikolay/nikolay.png', side: 'right' } // папа
+        { name: 'Лев', img: 'images/characters/lev/lev.png', side: 'left' },
+        { name: 'Екатерина', img: 'images/characters/ekaterina/ekaterina.png', side: 'right' },
+        { name: 'Николай', img: 'images/characters/nikolay/nikolay.png', side: 'right' } // папа
       ],
       dialogues: [
         {
@@ -74,10 +74,10 @@
     {
       id: 2,
       title: '🏫 Школа — Перемена',
-      bg: '/images/stories/0+/razbilsya-telefon/school-bg.jpg',
+      bg: 'images/stories/0+/razbilsya-telefon/school-bg.jpg',
       characters: [
-        { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
-        { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'right' }
+        { name: 'Лев', img: 'images/characters/lev/image.png', side: 'left' },
+        { name: 'Соня', img: 'images/characters/sofia/image.png', side: 'right' }
       ],
       dialogues: [
         {
@@ -128,11 +128,11 @@
     {
       id: 3,
       title: '🏠 Дома',
-      bg: '/images/stories/0+/razbilsya-telefon/broken-bg.jpg',
+      bg: 'images/stories/0+/razbilsya-telefon/broken-bg.jpg',
       characters: [
-        { name: 'Лев', img: '/images/characters/lev/lev.png', side: 'left' },
-        { name: 'Екатерина', img: '/images/characters/ekaterina/ekaterina.png', side: 'right' },
-        { name: 'Николай', img: '/images/characters/nikolay/nikolay.png', side: 'right' } // папа
+        { name: 'Лев', img: 'images/characters/lev/lev.png', side: 'left' },
+        { name: 'Екатерина', img: 'images/characters/ekaterina/ekaterina.png', side: 'right' },
+        { name: 'Николай', img: 'images/characters/nikolay/nikolay.png', side: 'right' } // папа
       ],
       dialogues: {
         withProtectionAndDropped: [
@@ -231,10 +231,10 @@
     {
       id: 4,
       title: '📞 Страховой агент',
-      bg: '/images/stories/0+/razbilsya-telefon/agent-chat-bg.jpg',
+      bg: 'images/stories/0+/razbilsya-telefon/agent-chat-bg.jpg',
       characters: [
-        { name: 'Лев', img: '/images/characters/lev/lev.png', side: 'left' },
-        { name: 'Агент', img: '/images/characters/mikhail/mikhail.png', side: 'right' }
+        { name: 'Лев', img: 'images/characters/lev/lev.png', side: 'left' },
+        { name: 'Агент', img: 'images/characters/mikhail/mikhail.png', side: 'right' }
       ],
       available: 'withProtectionAndDropped',
       dialogues: [
@@ -272,11 +272,11 @@
     {
       id: 5,
       title: '📖 Вывод',
-      bg: '/images/stories/0+/razbilsya-telefon/bedroom-bg.jpg',
+      bg: 'images/stories/0+/razbilsya-telefon/bedroom-bg.jpg',
       characters: [
-        { name: 'Лев', img: '/images/characters/lev/lev.png', side: 'left' },
-        { name: 'Екатерина', img: '/images/characters/ekaterina/ekaterina.png', side: 'right' },
-        { name: 'Николай', img: '/images/characters/nikolay/nikolay.png', side: 'right' } // папа
+        { name: 'Лев', img: 'images/characters/lev/lev.png', side: 'left' },
+        { name: 'Екатерина', img: 'images/characters/ekaterina/ekaterina.png', side: 'right' },
+        { name: 'Николай', img: 'images/characters/nikolay/nikolay.png', side: 'right' } // папа
       ],
       dialogues: {
         withProtectionAndDropped: [
