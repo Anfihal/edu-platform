@@ -1,0 +1,656 @@
+/* ========================================
+   ЦВЕТОВЫЕ ТЕМЫ + ФОНОВЫЕ КАРТИНКИ
+   ======================================== */
+
+/* ===== 0+ (Малыши) ===== */
+.age-home[data-age="0+"],
+.story-page[data-age="0+"] {
+    --primary: #FF6B6B;
+    --primary-gradient: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-shadow: 0 8px 32px rgba(255, 107, 107, 0.2);
+    --bg-image: url('/images/backgrounds/bg-0.jpg');
+}
+
+/* ===== 12+ (Подростки) ===== */
+.age-home[data-age="12+"],
+.story-page[data-age="12+"] {
+    --primary: #3B82F6;
+    --primary-gradient: linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%);
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
+    --bg-image: url('/images/backgrounds/bg-12.jpg');
+}
+
+/* ===== 16+ (Юность) ===== */
+.age-home[data-age="16+"],
+.story-page[data-age="16+"] {
+    --primary: #8B5CF6;
+    --primary-gradient: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%);
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-shadow: 0 8px 32px rgba(139, 92, 246, 0.2);
+    --bg-image: url('/images/backgrounds/bg-16.jpg');
+}
+
+/* ===== 18+ (Взрослые) ===== */
+.age-home[data-age="18+"],
+.story-page[data-age="18+"] {
+    --primary: #0F172A;
+    --primary-gradient: linear-gradient(135deg, #0F172A 0%, #334155 100%);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px rgba(15, 23, 42, 0.3);
+    --bg-image: url('/images/backgrounds/bg-18.jpg');
+}
+
+/* ========================================
+   БАЗОВЫЕ СТИЛИ — 100% ЭКРАН
+   ======================================== */
+.age-home,
+.story-page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    color: #FFFFFF;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== ФОН — КАРТИНКА В CSS ===== */
+.age-home-bg,
+.story-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(10px);
+    transform: scale(1.1);
+}
+
+.age-home-bg::after,
+.story-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(102, 126, 234, 0.7) 0%, rgba(118, 75, 162, 0.85) 100%);
+}
+
+/* ===== ХЕДЕР С КНОПКАМИ (СТЕКЛО) ===== */
+.age-home-header,
+.story-header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    max-width: 100%;
+    margin: 0;
+}
+
+.back-btn {
+    padding: 12px 24px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(-2px);
+}
+
+.settings-btn {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+}
+
+.settings-btn::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    /* Adjust as needed */
+    height: 24px;
+    /* Adjust as needed */
+    background-image: url("data:image/svg+xml,%3Csvg width='199' height='200' viewBox='0 0 199 200' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M88.3772 0.534695C81.5532 1.60869 79.5442 3.52769 78.1342 10.3207C75.8162 21.4857 75.1832 22.4747 68.6482 25.1367C60.9232 28.2827 58.3392 28.2027 52.2772 24.6287C46.7662 21.3797 41.4712 20.0347 37.8062 20.9547C36.4912 21.2847 32.1002 25.2677 28.0502 29.8057L20.6852 38.0557L26.1852 33.6247C31.1452 29.6277 31.3822 29.5307 28.6032 32.6337C26.9072 34.5267 24.5452 37.3727 23.3532 38.9597C21.5692 41.3327 21.1792 41.5107 21.1532 39.9597C21.1222 38.1377 21.0722 38.1397 19.6532 40.0157C17.3102 43.1137 17.8912 45.6897 22.6852 53.4657C26.2712 59.2817 27.1852 61.6787 27.1852 65.2647C27.1852 73.6167 23.6302 76.6847 9.56623 80.4717C7.31823 81.0777 4.28823 82.6767 2.83223 84.0257C0.0492344 86.6057 -0.287765 89.3307 0.169235 105.575C0.399235 113.725 1.59923 114.919 13.4052 118.744C23.2772 121.943 23.7602 122.234 25.5692 126.075C29.7732 134.999 29.2422 138.006 21.4702 149.312L17.8702 154.55L19.6652 158.532C23.1812 166.328 39.1682 179.531 43.3792 178.117C44.0972 177.875 47.1052 177.475 50.0632 177.228C53.0212 176.981 55.7212 176.339 56.0632 175.802C56.4052 175.265 58.3982 173.912 60.4912 172.796C63.6542 171.11 64.9212 170.937 67.9912 171.77C74.4462 173.524 75.1542 174.697 79.1512 190.256C79.9652 193.426 81.1272 194.997 83.9552 196.756C87.3822 198.887 88.7962 199.075 101.362 199.075C113.669 199.075 115.322 198.866 117.862 196.985C120.755 194.843 123.007 189.562 125.149 179.897C126.16 175.339 126.773 174.47 130.272 172.647C135.525 169.909 136.353 169.985 145.695 174.063C150.749 176.269 155.283 177.555 158.032 177.563C162.043 177.574 162.914 177.059 169.285 170.908C173.083 167.242 177.38 162.212 178.834 159.731L181.478 155.219L176.208 145.027L170.938 134.836L172.603 129.823C173.518 127.066 175.039 124.112 175.982 123.258C176.925 122.405 181.66 120.375 186.503 118.748C191.346 117.12 195.919 114.954 196.665 113.934C198.415 111.54 199.594 98.1867 198.658 91.3747C197.608 83.7467 192.907 79.2107 184.292 77.5157C176.501 75.9827 172.842 73.0677 170.73 66.7097L169.133 61.9027L172.693 55.9907C176.99 48.8547 178.67 43.6447 177.797 40.1637C177.041 37.1537 165.029 24.0627 161.211 22.0887C155.24 19.0007 152.159 19.2507 143.333 23.5417C137.234 26.5057 135.135 28.0027 135.552 29.0877C137.604 34.4367 130.679 35.0237 121.229 30.3007C115.214 27.2947 112.021 24.4057 113.301 23.1257C113.601 22.8257 117.477 24.1537 121.916 26.0777C126.354 28.0007 130.481 29.5747 131.085 29.5747C133.435 29.5747 131.976 27.9667 127.455 25.5747C122.867 23.1467 122.684 22.8727 121.142 16.0747C119.018 6.71069 117.787 4.72869 112.695 2.47569C107.666 0.251695 96.0602 -0.675305 88.3772 0.534695ZM88.6682 2.6017C87.6472 4.2537 87.9822 4.33769 97.1852 4.72069C104.231 5.01369 105.685 4.81769 105.685 3.57469C105.685 2.38769 103.982 2.0147 97.5182 1.7857C92.3332 1.6017 89.1022 1.8997 88.6682 2.6017ZM80.8962 6.25769C80.3862 7.10769 77.1852 19.2697 77.1852 20.3557C77.1852 20.6957 77.6042 20.5467 78.1172 20.0247C78.6292 19.5017 79.7192 16.1527 80.5392 12.5807C81.9302 6.5207 82.0542 4.32669 80.8962 6.25769ZM117.2 15.7657C117.192 16.6957 117.635 17.7347 118.185 18.0747C119.451 18.8567 119.451 17.5327 118.185 15.5747C117.35 14.2817 117.214 14.3087 117.2 15.7657ZM148.644 22.6417C147.8 24.0077 148.024 24.1617 151.935 24.9057C155.323 25.5507 156.028 24.8177 153.985 22.7747C152.498 21.2877 149.526 21.2137 148.644 22.6417ZM38.6752 23.5917C38.3402 24.1327 38.5262 24.5747 39.0872 24.5747C39.6482 24.5747 40.9422 25.4707 41.9612 26.5647C43.5542 28.2747 53.8432 32.5747 56.3422 32.5747C58.8782 32.5747 56.4272 30.4887 50.9352 27.9737C47.9492 26.6075 44.9655 25.2362 41.9842 23.8597C40.2682 23.0647 39.0602 22.9677 38.6752 23.5917ZM164.205 42.0507C163.416 43.0007 163.34 43.5747 164.004 43.5747C165.212 43.5747 166.621 41.6777 165.928 40.9837C165.676 40.7327 164.901 41.2127 164.205 42.0507ZM169.541 42.2017C168.912 42.4597 168.627 43.5487 168.908 44.6227C169.189 45.6967 168.959 46.5747 168.397 46.5747C167.072 46.5747 161.869 55.2647 161.061 58.8247C160.718 60.3377 160.718 61.5527 161.061 61.5257C162.035 61.4487 172.185 44.5047 172.185 42.9557C172.185 41.5457 171.569 41.3697 169.541 42.2017ZM161.809 46.1137C160.844 48.6277 161.128 49.2767 162.307 47.2497C162.891 46.2457 163.158 45.2137 162.9 44.9567C162.643 44.6987 162.151 45.2197 161.809 46.1137ZM169.799 51.9757C167.782 56.2267 167.657 58.2457 169.527 56.3757C171.205 54.6977 173.185 51.0517 173.185 49.6407C173.185 47.4357 171.354 48.6977 169.799 51.9757ZM90.6852 59.5747C89.9742 60.7247 91.5942 60.7247 95.1852 59.5747C97.5722 58.8097 97.5412 58.7697 94.4942 58.6747C92.7392 58.6197 91.0252 59.0247 90.6852 59.5747ZM66.6742 67.0427C62.2932 71.0877 61.2012 72.7127 61.2642 75.0927C61.3072 76.7327 61.5702 77.5127 61.8472 76.8247C62.1252 76.1377 62.8122 75.5747 63.3742 75.5747C63.9372 75.5747 65.2842 74.4467 66.3692 73.0687C68.9142 69.8327 72.7662 67.6177 71.8942 69.8907C71.4212 71.1217 72.0052 71.0237 74.7422 69.4087C78.2272 67.3527 79.2222 65.5997 76.9352 65.5447C76.2412 65.5277 76.4642 65.0607 77.4352 64.4947C80.1622 62.9067 79.5102 61.9747 75.6742 61.9747C72.8442 61.9747 71.1002 62.9567 66.6742 67.0427ZM30.1592 62.6247C30.1452 62.8717 29.0592 66.2247 27.7472 70.0747C26.4342 73.9247 25.5582 77.2747 25.8002 77.5187C26.8622 78.5907 30.1912 73.6697 31.3402 69.3307C32.3212 65.6277 32.3322 64.3217 31.3912 63.3807C30.7282 62.7177 30.1732 62.3767 30.1592 62.6247ZM92.6722 66.3737C85.0042 69.0247 78.8182 73.0497 75.9352 77.2617C71.7612 83.3607 68.8102 93.1527 68.7442 101.127C68.5902 119.59 85.9932 136.909 101.543 133.769C119.75 130.093 132.425 115.872 132.29 99.2737C132.084 74.0587 113.964 59.0107 92.6722 66.3737ZM72.3682 72.7917C70.9682 74.1917 70.8232 75.5747 72.0782 75.5747C72.9942 75.5747 74.5032 72.5587 73.8922 71.9487C73.7052 71.7607 73.0192 72.1407 72.3682 72.7917ZM168.426 76.8247C168.896 78.2667 180.095 82.9977 180.969 82.1237C181.965 81.1287 179.402 79.2667 174.443 77.3837C168.811 75.2447 167.883 75.1577 168.426 76.8247ZM55.2642 86.1577C55.3122 87.3227 55.5492 87.5597 55.8682 86.7627C56.1572 86.0407 56.1212 85.1777 55.7892 84.8457C55.4572 84.5137 55.2212 85.1037 55.2642 86.1577ZM2.17123 89.8247C2.16423 92.1627 1.88623 95.0877 1.55523 96.3247C1.22323 97.5617 1.38023 98.5747 1.90323 98.5747C2.42623 98.5747 3.29223 95.6497 3.82623 92.0747C4.60023 86.8967 4.53223 85.5747 3.49123 85.5747C2.62323 85.5747 2.18023 87.0007 2.17123 89.8247ZM54.2002 96.8247C54.2092 100.263 54.6522 103.75 55.1852 104.575C55.8572 105.615 56.1592 103.698 56.1702 98.3247C56.1792 93.8147 55.7672 90.5747 55.1852 90.5747C54.6232 90.5747 54.1922 93.3147 54.2002 96.8247ZM132.803 107.856C128.547 122.95 128.592 122.545 131.527 119.36C134.347 116.3 136.474 107.872 135.995 101.658C135.713 98.0017 135.423 98.5647 132.803 107.856ZM187.185 108.839C183.668 110.427 183.565 110.572 185.214 111.614C187.236 112.893 187.803 112.814 189.614 111.004C192.694 107.923 191.524 106.88 187.185 108.839ZM12.1852 114.575C14.1592 115.851 19.1852 115.851 19.1852 114.575C19.1852 114.025 17.2722 113.582 14.9352 113.59C11.8232 113.602 11.0862 113.865 12.1852 114.575ZM125.823 124.075C125.507 124.9 125.636 125.575 126.109 125.575C126.583 125.575 127.23 124.9 127.547 124.075C127.864 123.25 127.734 122.575 127.261 122.575C126.787 122.575 126.14 123.25 125.823 124.075ZM162.323 125.907C161.563 126.824 161.261 128.328 161.64 129.312C162.287 130.991 162.367 130.99 163.32 129.294C163.87 128.314 164.177 126.781 164.002 125.888C163.711 124.395 163.575 124.396 162.323 125.907ZM168.392 126.616C166.601 129.483 167.915 131.129 170.284 128.985C171.33 128.039 172.185 126.66 172.185 125.92C172.185 123.88 169.83 124.312 168.392 126.616ZM72.4312 131.844C73.2422 134.337 81.2482 137.771 87.4782 138.298C95.2052 138.952 94.1942 137.55 85.1852 135.117C81.6102 134.151 77.1882 132.742 75.3582 131.987C72.8422 130.948 72.1292 130.913 72.4312 131.844ZM27.4822 143.075C25.7512 146.65 24.7612 149.575 25.2822 149.575C26.6212 149.575 32.1852 140.551 32.1852 138.379C32.1852 135.011 30.6382 136.557 27.4822 143.075ZM162.179 165.625C160.257 167.218 159.135 168.531 159.685 168.543C161.057 168.573 166.807 163.878 166.179 163.242C165.9 162.96 164.1 164.032 162.179 165.625ZM45.0462 171.628C42.9292 173.468 42.8922 173.628 44.6852 173.175C45.7852 172.897 47.9652 172.364 49.5302 171.99C51.6012 171.495 52.0092 171.079 51.0302 170.458C48.9482 169.139 47.6072 169.401 45.0462 171.628ZM121.935 171.264C120.972 171.516 120.185 172.139 120.185 172.648C120.185 174.107 122.811 173.73 124.185 172.075C125.444 170.558 125.104 170.436 121.935 171.264ZM109.939 181.084C109.55 183.114 109.719 183.377 110.822 182.461C112.345 181.198 112.668 178.575 111.302 178.575C110.816 178.575 110.202 179.704 109.939 181.084ZM119.685 186.575C119.345 187.125 119.544 187.575 120.126 187.575C120.708 187.575 121.185 187.125 121.185 186.575C121.185 186.025 120.987 185.575 120.744 185.575C120.501 185.575 120.025 186.025 119.685 186.575ZM109.512 191.189C105.071 193.049 104.431 194.575 108.091 194.575C110.133 194.575 111.477 193.898 112.231 192.489C113.687 189.768 113.322 189.593 109.512 191.189Z' fill='url(%23paint0_linear_235_86)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_235_86' x1='99.494' y1='0' x2='99.494' y2='199.075' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.408654'/%3E%3Cstop offset='1' stop-color='%230800E9'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.settings-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: rotate(90deg);
+}
+
+/* ===== КОНТЕНТ — ЦЕНТРИРОВАНИЕ ===== */
+.age-home-content,
+.story-content {
+    position: relative;
+    z-index: 10;
+    height: calc(100vh - 140px);
+    height: calc(100dvh - 140px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.age-home-title,
+.story-title {
+    font-size: clamp(32px, 6vw, 48px);
+    font-weight: 900;
+    margin-bottom: 8px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.age-home-subtitle {
+    font-size: clamp(14px, 2.5vw, 18px);
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   КАРУСЕЛЬ — НАТИВНЫЙ СКРОЛЛ + SNAP
+   ======================================== */
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* ===== КОНТЕЙНЕР КАРУСЕЛИ ===== */
+.carousel-container {
+    position: relative;
+    width: 100%;
+
+    /* ✅ Включаем горизонтальный скролл */
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    /* ✅ Scroll snap для центрирования карточек */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    /* ✅ Скрываем скроллбар */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+
+    /* ✅ Отступы для центрирования первой/последней карточки */
+    padding: 40px calc(50vw - 150px - 12px);
+    /* 150px = половина карточки, 12px = половина gap */
+
+    /* ✅ Чтобы padding не ломал скролл */
+    box-sizing: border-box;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+/* ===== ТРЕК КАРУСЕЛИ ===== */
+.carousel-track {
+    display: flex;
+    gap: 24px;
+    /* ✅ Должен совпадать с расчётом в JS */
+    width: max-content;
+
+    /* ✅ Плавность для scrollIntoView */
+    scroll-padding: 0;
+}
+
+/* ===== КАРТОЧКА — ФИКСИРОВАННАЯ ШИРИНА ДЛЯ РАСЧЁТОВ ===== */
+.story-card {
+    position: relative;
+
+    /* ✅ ФИКСИРОВАННАЯ ШИРИНА — важно для itemWidth в JS */
+    width: 300px;
+    height: 480px;
+
+    border-radius: 24px;
+    overflow: hidden;
+    cursor: pointer;
+    flex-shrink: 0;
+    /* ✅ Не сжимать в flex-контейнере */
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Стеклянный стиль */
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+
+    /* ✅ Scroll snap — карточка центрируется при скролле */
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+/* ✅ Hover-эффект (не влияет на расчёт ширины) */
+.story-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    z-index: 5;
+}
+
+/* ===== КАРТИНКА ИСТОРИИ ===== */
+.story-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.4s ease;
+}
+
+.story-card:hover .story-image {
+    transform: scale(1.05);
+}
+
+.story-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            transparent 0%,
+            rgba(0, 0, 0, 0.3) 50%,
+            rgba(0, 0, 0, 0.85) 100%);
+}
+
+/* Картинки для каждой истории — через data-story-id */
+.age-home[data-age="0+"] .story-card[data-story-id="1"] .story-image {
+    background-image: url('/images/stories/0+/razbilsya-telefon/bg.png');
+}
+
+.age-home[data-age="0+"] .story-card[data-story-id="2"] .story-image {
+    background-image: url('/images/stories/0+/poteryalsya-character/bg.png');
+}
+
+.age-home[data-age="0+"] .story-card[data-story-id="3"] .story-image {
+    background-image: url('/images/stories/0+/slomalas-igrushka/bg.png');
+}
+
+.age-home[data-age="0+"] .story-card[data-story-id="4"] .story-image {
+    background-image: url('/images/stories/0+/ukusila-sobaka/bg.png');
+}
+
+.age-home[data-age="12+"] .story-card[data-story-id="1"] .story-image {
+    background-image: url('/images/stories/12+/razbil-telefon/bg.jpg');
+}
+
+.age-home[data-age="12+"] .story-card[data-story-id="2"] .story-image {
+    background-image: url('/images/stories/12+/otmena-poezdki/bg.jpg');
+}
+
+.age-home[data-age="12+"] .story-card[data-story-id="3"] .story-image {
+    background-image: url('/images/stories/12+/travma-sport/bg.jpg');
+}
+
+.age-home[data-age="12+"] .story-card[data-story-id="4"] .story-image {
+    background-image: url('/images/stories/12+/vzlom-akkaunta/bg.jpg');
+}
+
+.age-home[data-age="16+"] .story-card[data-story-id="1"] .story-image {
+    background-image: url('/images/stories/16+/ukrali-smartfon/bg.jpg');
+}
+
+.age-home[data-age="16+"] .story-card[data-story-id="2"] .story-image {
+    background-image: url('/images/stories/16+/otmena-kontserta/bg.jpg');
+}
+
+.age-home[data-age="16+"] .story-card[data-story-id="3"] .story-image {
+    background-image: url('/images/stories/16+/puteshestvie/bg.jpg');
+}
+
+.age-home[data-age="16+"] .story-card[data-story-id="4"] .story-image {
+    background-image: url('/images/stories/16+/extreme-sport/bg.jpg');
+}
+
+.age-home[data-age="18+"] .story-card[data-story-id="1"] .story-image {
+    background-image: url('/images/stories/18+/strakhovanie-ustroystva/bg.jpg');
+}
+
+.age-home[data-age="18+"] .story-card[data-story-id="2"] .story-image {
+    background-image: url('/images/stories/18+/otmena-meropriyatiya/bg.jpg');
+}
+
+.age-home[data-age="18+"] .story-card[data-story-id="3"] .story-image {
+    background-image: url('/images/stories/18+/strakhovanie-puteshestviya/bg.jpg');
+}
+
+.age-home[data-age="18+"] .story-card[data-story-id="4"] .story-image {
+    background-image: url('/images/stories/18+/zashchita-cifrovykh-aktivov/bg.jpg');
+}
+
+/* ===== ИНФОРМАЦИЯ НА КАРТОЧКЕ ===== */
+.story-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    z-index: 5;
+}
+
+.story-info h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    line-height: 1.3;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.story-description {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 16px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.story-btn {
+    width: 100%;
+    padding: 12px 24px;
+    background: var(--primary-gradient);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.story-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== КНОПКИ НАВИГАЦИИ (◀ ▶) ===== */
+/* ===== КНОПКИ НАВИГАЦИИ ===== */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 15;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn.left {
+    left: 20px;
+}
+
+.carousel-btn.right {
+    right: 20px;
+}
+
+.carousel-btn.left::before,
+.carousel-btn.right::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.carousel-btn.left::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='117' height='155' viewBox='0 0 117 155' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 77.0414C0 77.0414 140.5 197.42 112.5 137.23C84.5 77.0407 84.5 77.0408 112.5 16.8526C140.5 -43.3356 0 77.0414 0 77.0414Z' fill='url(%23paint0_radial_247_16)'/%3E%3Cdefs%3E%3CradialGradient id='paint0_radial_247_16' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='translate(75 77.042) rotate(90) scale(69.5 69.5)'%3E%3Cstop/%3E%3Cstop offset='0.9999' stop-color='%230800E9'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E");
+}
+
+.carousel-btn.right::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='117' height='155' viewBox='0 0 117 155' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M116.191 77.0414C116.191 77.0414 -24.3091 197.42 3.69092 137.23C31.6909 77.0407 31.6909 77.0408 3.69092 16.8526C-24.3091 -43.3356 116.191 77.0414 116.191 77.0414Z' fill='url(%23paint0_linear_247_9)' fill-opacity='0.5'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_247_9' x1='41.1909' y1='7.54199' x2='41.1909' y2='146.542' gradientUnits='userSpaceOnUse'%3E%3Cstop/%3E%3Cstop offset='0.9999' stop-color='%230800E9'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+}
+
+.carousel-btn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* ===== ПАГИНАЦИЯ (ТОЧКИ) ===== */
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.pagination-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0;
+}
+
+.pagination-dot:hover {
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(1.2);
+}
+
+.pagination-dot.active {
+    background: #FFFFFF;
+    width: 32px;
+    border-radius: 5px;
+}
+
+/* ========================================
+   АДАПТИВ — СОВМЕСТИМО С ДИНАМИЧЕСКОЙ ШИРИНОЙ
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .story-card {
+        width: 260px;
+        /* ✅ Меняем ширину — JS пересчитает itemWidth */
+        height: 420px;
+    }
+
+    .carousel-container {
+        /* ✅ Пересчитываем padding под новую ширину карточки */
+        padding: 40px calc(50vw - 130px - 12px);
+        /* 130px = 260/2 */
+    }
+
+    .carousel-btn.left {
+        left: 10px;
+    }
+
+    .carousel-btn.right {
+        right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .age-home-header,
+    .story-header {
+        padding: 15px 20px;
+    }
+
+    .age-home-content,
+    .story-content {
+        height: calc(100vh - 120px);
+        height: calc(100dvh - 120px);
+        padding: 0 20px;
+    }
+
+    .story-card {
+        width: 240px;
+        height: 380px;
+    }
+
+    .carousel-container {
+        padding: 30px calc(50vw - 120px - 8px);
+        /* 120px = 240/2, 8px = половина gap 16px */
+    }
+
+    .carousel-track {
+        gap: 16px;
+        /* ✅ Меняем gap — JS пересчитает */
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .carousel-btn.left::before,
+    .carousel-btn.right::before {
+        font-size: 14px;
+    }
+
+    .age-home-title,
+    .story-title {
+        font-size: 24px;
+    }
+
+    .story-info h3 {
+        font-size: 18px;
+    }
+
+    .story-description {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 375px) {
+    .story-card {
+        width: 220px;
+        height: 340px;
+    }
+
+    .carousel-container {
+        padding: 20px calc(50vw - 110px - 6px);
+        /* 110px = 220/2, 6px = половина gap 12px */
+    }
+
+    .carousel-track {
+        gap: 12px;
+    }
+
+    .carousel-btn {
+        display: none;
+        /* ✅ Скрываем кнопки на маленьких экранах */
+    }
+
+    .back-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .settings-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .story-info h3 {
+        font-size: 16px;
+    }
+
+    .story-btn {
+        font-size: 13px;
+        padding: 10px 20px;
+    }
+}
+
+/* ========================================
+   ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ
+   ======================================== */
+
+/* Плавное появление карточек при загрузке */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.story-card {
+    animation: fadeInUp 0.4s ease forwards;
+    animation-delay: calc(var(--i, 0) * 0.1s);
+}
+
+/* Стили только для тач-устройств */
+@media (max-width: 768px) and (hover: none) {
+    .story-card:active {
+        transform: scale(0.98);
+    }
+}

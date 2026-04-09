@@ -1,0 +1,247 @@
+/* ===== OVERLAY ===== */
+.call-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== CONTAINER ===== */
+.call-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+/* ===== AGENT AVATAR ===== */
+.call-agent-avatar {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.avatar-circle {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    margin: 0 auto 24px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ✅ ИКОНКА АГЕНТА В CSS */
+.avatar-circle[data-icon="agent"]::before {
+    content: '👨‍💼';
+    font-size: 64px;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+.call-agent-avatar h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.agent-phone {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 16px 0;
+}
+
+.call-timer {
+    font-size: 20px;
+    color: #4ADE80;
+    font-weight: 600;
+}
+
+.call-status {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    animation: blink 1.5s ease-in-out infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+.call-ended {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ===== CONTROLS ===== */
+.call-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.call-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-width: 100px;
+    position: relative;
+}
+
+/* ✅ ИКОНКИ КНОПОК В CSS */
+.action-btn[data-icon="mic"]::before {
+    content: '🎤';
+    font-size: 28px;
+}
+
+.action-btn[data-icon="mic-off"]::before {
+    content: '🔇';
+    font-size: 28px;
+}
+
+.action-btn[data-icon="volume-up"]::before {
+    content: '🔊';
+    font-size: 28px;
+}
+
+.action-btn[data-icon="volume-down"]::before {
+    content: '🔉';
+    font-size: 28px;
+}
+
+.action-btn span {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.action-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.action-btn.active {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ✅ КНОПКИ ЗВОНКА В CSS */
+.call-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px 48px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.call-btn[data-icon="phone"]::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url("/icons/phone.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.call-btn[data-icon="phone-off"]::before {
+    content: '📴';
+    font-size: 24px;
+}
+
+.call-start {
+    background: linear-gradient(135deg, #4ADE80 0%, #22C55E 100%);
+    color: #FFFFFF;
+}
+
+.call-start:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(74, 222, 128, 0.4);
+}
+
+.call-end {
+    background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+    color: #FFFFFF;
+}
+
+.call-end:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(239, 68, 68, 0.4);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .call-container {
+        padding: 30px 20px;
+        gap: 36px;
+    }
+
+    .avatar-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .avatar-circle[data-icon="agent"]::before {
+        font-size: 50px;
+    }
+
+    .call-agent-avatar h2 {
+        font-size: 24px;
+    }
+
+    .call-btn {
+        padding: 18px 40px;
+        font-size: 16px;
+    }
+}

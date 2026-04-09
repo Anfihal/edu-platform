@@ -1,0 +1,223 @@
+/* ===== OVERLAY ===== */
+.qte-game-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.qte-game-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    border-radius: 24px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+/* ===== HEADER ===== */
+.qte-game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.qte-game-header h2 {
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+}
+
+/* ✅ ИКОНКА GAMEPAD В CSS */
+.qte-game-header h2[data-icon="gamepad"]::before {
+    content: '🎮';
+    font-size: 32px;
+}
+
+/* ✅ КНОПКА ЗАКРЫТИЯ В CSS */
+.qte-close {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0;
+}
+
+.qte-close[data-icon="close"]::before {
+    content: '✕';
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.qte-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+/* ===== INSTRUCTION ===== */
+.qte-instruction {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+/* ===== PROGRESS BAR ===== */
+.qte-bar-container {
+    margin-bottom: 32px;
+}
+
+.qte-bar {
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.qte-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #EF4444 0%, #F59E0B 50%, #4ADE80 100%);
+    transition: width 0.1s linear;
+    border-radius: 20px;
+}
+
+.qte-fill[data-status="good"] {
+    box-shadow: 0 0 30px rgba(74, 222, 128, 0.5);
+}
+
+.qte-fill[data-status="bad"] {
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.5);
+}
+
+/* ===== ACTION BUTTON ===== */
+.qte-action-btn {
+    width: 200px;
+    height: 80px;
+    background: linear-gradient(135deg, #FFFFFF 0%, #E0E7FF 100%);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.1s;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    display: block;
+}
+
+/* ✅ ИКОНКИ КНОПКИ В CSS */
+.qte-action-btn[data-icon="tap"]::before {
+    content: '👆';
+    font-size: 40px;
+}
+
+.qte-action-btn[data-icon="check"]::before {
+    content: '✅';
+    font-size: 40px;
+}
+
+.qte-action-btn[data-icon="cross"]::before {
+    content: '❌';
+    font-size: 40px;
+}
+
+.qte-action-btn:hover:not(:disabled) {
+    transform: scale(1.05);
+}
+
+.qte-action-btn:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.qte-action-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* ===== RESULT ===== */
+.qte-result {
+    margin-top: 24px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+}
+
+.qte-result p {
+    font-size: 0;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 16px;
+}
+
+/* ✅ ИКОНКИ РЕЗУЛЬТАТА В CSS */
+.qte-result p[data-icon="trophy"]::before {
+    content: '🏆';
+    font-size: 48px;
+}
+
+.qte-result p[data-icon="broken"]::before {
+    content: '💔';
+    font-size: 48px;
+}
+
+.qte-result[data-result="success"] {
+    background: rgba(74, 222, 128, 0.2);
+    border: 2px solid rgba(74, 222, 128, 0.5);
+}
+
+.qte-result[data-result="fail"] {
+    background: rgba(239, 68, 68, 0.2);
+    border: 2px solid rgba(239, 68, 68, 0.5);
+}
+
+/* ✅ КНОПКА ПРОДОЛЖИТЬ В CSS */
+.qte-result button {
+    padding: 14px 32px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.qte-result button[data-icon="continue"]::before {
+    content: '▶';
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.qte-result button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .qte-game-container {
+        padding: 24px;
+    }
+
+    .qte-action-btn {
+        width: 160px;
+        height: 70px;
+    }
+
+    .qte-action-btn[data-icon="tap"]::before {
+        font-size: 32px;
+    }
+}

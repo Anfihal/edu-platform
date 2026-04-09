@@ -1,0 +1,171 @@
+/* ===== OVERLAY ===== */
+.memory-game-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.memory-game-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 32px;
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    border-radius: 24px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== HEADER ===== */
+.memory-game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.memory-game-header h2 {
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+}
+
+/* ✅ ИКОНКА BRAIN В CSS */
+.memory-game-header h2[data-icon="brain"]::before {
+    content: '🧠';
+    font-size: 32px;
+}
+
+.memory-stats {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+}
+
+/* ✅ ИКОНКА MOVES В CSS */
+.memory-stats span[data-icon="moves"]::before {
+    content: '👆';
+    font-size: 20px;
+}
+
+.stat-value {
+    font-size: 18px;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+/* ✅ КНОПКА ЗАКРЫТИЯ В CSS */
+.memory-close {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0;
+}
+
+.memory-close[data-icon="close"]::before {
+    content: '✕';
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.memory-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+/* ===== GRID ===== */
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* ===== CARD ===== */
+.memory-card {
+    aspect-ratio: 1;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    padding: 0;
+}
+
+.memory-card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* ✅ ИКОНКИ КАРТОЧЕК В CSS */
+.memory-card[data-icon="card"]::before {
+    content: '❓';
+    font-size: 32px;
+}
+
+.memory-card[data-icon="shield"]::before {
+    content: '🛡️';
+    font-size: 32px;
+}
+
+.memory-card[data-icon="phone"]::before {
+    content: '📱';
+    font-size: 32px;
+}
+
+.memory-card[data-icon="heart"]::before {
+    content: '❤️';
+    font-size: 32px;
+}
+
+.memory-card[data-icon="piggy"]::before {
+    content: '🐷';
+    font-size: 32px;
+}
+
+.memory-card.flipped,
+.memory-card.matched {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.memory-card.matched {
+    animation: matchPulse 0.5s ease forwards;
+}
+
+@keyframes matchPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .memory-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+    }
+
+    .memory-card[data-icon]::before {
+        font-size: 24px;
+    }
+}
