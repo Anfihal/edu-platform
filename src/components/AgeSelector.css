@@ -1,0 +1,234 @@
+/* ===== СБРОС ===== */
+/* ===== СБРОС ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== ГЛАВНЫЙ КОНТЕЙНЕР ===== */
+.age-selector {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #FFFFFF;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== ФОНОВОЕ ИЗОБРАЖЕНИЕ ===== */
+.age-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/office-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+/* ===== ЗАГОЛОВОК (ЦЕНТРИРОВАН) ===== */
+.age-header {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.age-title {
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.title-part {
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: clamp(40px, 7vw, 100px);
+    line-height: 0.9;
+    letter-spacing: -0.07em;
+    text-transform: lowercase;
+    color: #000;
+    text-shadow: 0px 0px 5px #FFFFFF;
+    padding: 5px 15px;
+    white-space: nowrap;
+}
+
+/* ===== СЕТКА КНОПОК (ЦЕНТРИРОВАНА) ===== */
+.age-grid {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1103px;
+    margin: 30px auto 0;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+}
+
+/* ===== ОБЩИЕ СТИЛИ КНОПКИ ===== */
+.age-button {
+    width: 100%;
+    max-width: 527px;
+    height: clamp(120px, 14vh, 145px);
+    min-width: 250px;
+
+    background: linear-gradient(180deg, rgba(152, 152, 152, 0.02) 0%, rgba(195, 195, 195, 0.02) 100%);
+    border-radius: 200px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.age-label {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: clamp(48px, 7vw, 100px);
+    line-height: 0.9;
+    letter-spacing: -0.07em;
+    text-transform: lowercase;
+    text-align: center;
+}
+
+/* ===== 18+ (СИНИЙ) ===== */
+.age-18 .age-label {
+    background: linear-gradient(135deg, #0047FF 0%, #00C9FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===== 16+ (РОЗОВЫЙ) ===== */
+.age-16 .age-label {
+    background: linear-gradient(135deg, #FF006E 0%, #FF4D9E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===== 12+ (БИРЮЗОВЫЙ) ===== */
+.age-12 .age-label {
+    background: linear-gradient(135deg, #00F5A8 0%, #00D9FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===== 0+ (КРАСНЫЙ) ===== */
+.age-0 .age-label {
+    background: linear-gradient(135deg, #FF0000 0%, #FF6B6B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===== HOVER ЭФФЕКТЫ ===== */
+.age-button:hover {
+    transform: scale(1.05) translateY(-3px);
+    box-shadow:
+        0px 40px 80px rgba(255, 255, 255, 0.3),
+        0px 30px 60px 10px rgba(255, 255, 255, 0.3),
+        0px 60px 120px rgba(0, 0, 0, 0.15);
+}
+
+.age-button:active {
+    transform: scale(0.98) translateY(0);
+}
+
+/* ===== ПЛАНШЕТ (до 1024px) ===== */
+@media (max-width: 1024px) {
+    .age-selector {
+        padding: 40px 20px;
+    }
+
+    .title-part {
+        font-size: clamp(32px, 5vw, 60px);
+        padding: 3px 12px;
+    }
+
+    .age-grid {
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    .age-button {
+        min-width: 200px;
+        height: 110px;
+    }
+
+    .age-label {
+        font-size: clamp(40px, 6vw, 60px);
+    }
+}
+
+/* ===== МОБИЛЬНЫЙ (до 768px) ===== */
+@media (max-width: 768px) {
+    .age-selector {
+        padding: 30px 15px;
+        justify-content: center;
+    }
+
+    .title-part {
+        font-size: 32px;
+        padding: 3px 10px;
+    }
+
+    .age-grid {
+        gap: 15px;
+        margin-top: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .age-button {
+        min-width: auto;
+        height: 90px;
+    }
+
+    .age-label {
+        font-size: 36px;
+    }
+}
+
+/* ===== МАЛЕНЬКИЙ ЭКРАН (до 375px) ===== */
+@media (max-width: 375px) {
+    .age-selector {
+        padding: 20px 10px;
+    }
+
+    .title-part {
+        font-size: 26px;
+    }
+
+    .age-grid {
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+    .age-button {
+        height: 75px;
+        min-width: auto;
+    }
+
+    .age-label {
+        font-size: 28px;
+    }
+}

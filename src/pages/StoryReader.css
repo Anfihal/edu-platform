@@ -1,0 +1,512 @@
+/* ========================================
+   ПЕРЕМЕННЫЕ И БАЗОВЫЕ НАСТРОЙКИ
+   ======================================== */
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-blur: blur(20px);
+    --accent-color: #4ADE80;
+    --text-main: #FFFFFF;
+    --text-dim: rgba(255, 255, 255, 0.8);
+    --shadow-heavy: 0px 30px 60px rgba(0, 0, 0, 0.4);
+    --transition-fast: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========================================
+   ШАБЛОН ИСТОРИИ — БАЗА
+   ======================================== */
+
+.story-reader {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    background: #000;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ===== ФОН ===== */
+.story-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+/* ===== КОНТЕЙНЕР ПЕРСОНАЖЕЙ — ВЫРАВНИВАНИЕ ПО КРАЯМ ===== */
+.characters-container {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 2%;
+}
+
+.character {
+    position: relative;
+    height: 85vh;
+    max-width: 45%;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: flex-end;
+}
+
+.character img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: bottom;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+.character.left {
+    justify-content: flex-start;
+}
+
+.character.right {
+    justify-content: flex-end;
+}
+
+/* ===== ДИАЛОГОВОЕ ОКНО ===== */
+.dialogue-box {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    width: min(90%, 788px);
+    transition: all var(--transition-fast);
+}
+
+.dialogue-box.dialogue-minimized {
+    bottom: 30px;
+    transform: translateX(-50%) scale(0.95);
+    opacity: 0.8;
+}
+
+.dialogue-content {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-radius: 24px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-heavy);
+    padding: clamp(20px, 5vh, 40px) clamp(24px, 5vw, 60px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+}
+
+/* ✅ ИМЯ СПИКЕРА — ПО ЦЕНТРУ ВВЕРХУ */
+.speaker-name {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: 700;
+    color: var(--text-dim);
+    text-transform: lowercase;
+    margin: 0;
+
+    padding: 8px 24px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 100px;
+    white-space: nowrap;
+}
+
+.dialogue-text {
+    font-size: clamp(16px, 3vw, 24px);
+    font-weight: 600;
+    color: var(--text-main);
+    text-align: center;
+    line-height: 1.4;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding-top: 30px;
+}
+
+.dialogue-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* ===== КНОПКИ ===== */
+.dialogue-btn {
+    padding: 12px 32px;
+    border-radius: 100px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.dialogue-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.dialogue-btn.secondary {
+    font-size: 14px;
+    padding: 10px 24px;
+    background: transparent;
+}
+
+/* ===== ВЫБОРЫ (CHOICES) ===== */
+.choices-container {
+    position: absolute;
+    inset: 0;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.4s ease;
+}
+
+.choices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.choice-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: var(--glass-blur);
+    border: 2px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 24px;
+    color: white;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.choice-card:hover:not(:disabled) {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--accent-color);
+}
+
+.choice-card:disabled {
+    opacity: 0.5;
+    filter: grayscale(1);
+    cursor: not-allowed;
+}
+
+/* ✅ ИКОНКА — КРУГ + URL КАРТИНКИ */
+.choice-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid var(--glass-border);
+    background-size: 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ✅ РЕАЛЬНЫЕ ИКОНКИ ЧЕРЕЗ URL */
+.choice-card[data-icon="shield"] .choice-icon {
+    background-image: url('/images/icons/shield.png');
+}
+
+.choice-card[data-icon="case"] .choice-icon {
+    background-image: url('/images/icons/case.png');
+}
+
+.choice-card[data-icon="headphones"] .choice-icon {
+    background-image: url('/images/icons/headphones.png');
+}
+
+.choice-card[data-icon="document"] .choice-icon {
+    background-image: url('/images/icons/document.png');
+}
+
+.choice-card[data-icon="piggy"] .choice-icon {
+    background-image: url('/images/icons/piggy.png');
+}
+
+.choice-card[data-icon="heart"] .choice-icon {
+    background-image: url('/images/icons/heart.png');
+}
+
+.choice-card[data-icon="eye"] .choice-icon {
+    background-image: url('/images/icons/eye.png');
+}
+
+.choice-price {
+    color: var(--accent-color);
+    font-weight: 800;
+    font-size: 20px;
+}
+
+/* ===== UI ЭЛЕМЕНТЫ (WIDGETS, PROGRESS, BACK) ===== */
+.back-btn-small {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    padding: 10px 20px;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+}
+
+.story-widgets {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.widget-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.widget-btn[data-icon="chat"] {
+    background-image: url('/images/icons/chat.png');
+}
+
+.widget-btn[data-icon="phone"] {
+    background-image: url('/images/icons/phone.png');
+}
+
+.story-progress {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    display: flex;
+    gap: 8px;
+}
+
+.progress-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.progress-dot.active {
+    background: white;
+    transform: scale(1.3);
+}
+
+.progress-dot.completed {
+    background: var(--accent-color);
+}
+
+/* ===== ЗАГРУЗКА И ОШИБКИ ===== */
+.loading-state,
+.error-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+}
+
+.loading-spinner {
+    font-size: 24px;
+    color: #FFFFFF;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.error-message {
+    text-align: center;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+.error-message h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.error-message p {
+    margin-bottom: 24px;
+    opacity: 0.8;
+}
+
+.error-message button {
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    color: #FFFFFF;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* ===== АНИМАЦИИ ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+/* ========================================
+   📱 МОБИЛЬНАЯ АДАПТАЦИЯ
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* ✅ ПЕРСОНАЖИ — ОДИНАКОВАЯ ВЫСОТА */
+    .character {
+        height: 55vh;
+    }
+
+    .characters-container {
+        padding: 0 1%;
+    }
+
+    .character.left img {
+        width: auto;
+        height: 100%;
+    }
+
+    .character.right img {
+        width: auto;
+        height: 100%;
+    }
+
+    .dialogue-box {
+        bottom: 20px;
+        width: 95%;
+    }
+
+    .dialogue-content {
+        padding: 20px;
+    }
+
+    .speaker-name {
+        top: 16px;
+        padding: 6px 20px;
+        font-size: 14px;
+    }
+
+    .choices-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .choice-card {
+        padding: 16px;
+    }
+
+    .choice-icon {
+        width: 56px;
+        height: 56px;
+        background-size: 32px;
+    }
+
+    .dialogue-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dialogue-btn {
+        width: 100%;
+    }
+
+    .story-widgets {
+        top: auto;
+        bottom: 80px;
+        right: 20px;
+        flex-direction: row;
+    }
+
+    .widget-btn {
+        width: 46px;
+        height: 46px;
+        background-size: 22px;
+    }
+
+    .back-btn-small {
+        top: 10px;
+        left: 10px;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .character {
+        height: 50vh;
+    }
+
+    .dialogue-content {
+        padding: 10px;
+    }
+
+    .speaker-name {
+        top: 12px;
+        padding: 5px 16px;
+        font-size: 13px;
+    }
+
+    .dialogue-text {
+        font-size: 16px;
+        padding-top: 24px;
+    }
+}
