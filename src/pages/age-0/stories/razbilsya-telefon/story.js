@@ -13,16 +13,16 @@
       bg: '/images/stories/0+/razbilsya-telefon/shop-bg.jpg',
       characters: [
         { name: 'Лев', img: '/images/characters/lev/lev.png', side: 'left' },
-        { name: 'Елена', img: '/images/characters/elena/elena.png', side: 'right' },
-        { name: 'Сергей', img: '/images/characters/nikolay/nikolay.png', side: 'right' } // папа
+        { name: 'Екатерина', img: '/images/characters/ekaterina/ekaterina.png', side: 'right' },
+        { name: 'Николай', img: '/images/characters/nikolay/nikolay.png', side: 'right' } // папа
       ],
       dialogues: [
         {
-          speaker: 'Елена',
+          speaker: 'Екатерина',
           text: 'Лев, помнишь, мы договаривались? Ты получил хорошие оценки, и мы обещали купить тебе телефон.'
         },
         {
-          speaker: 'Сергей',
+          speaker: 'Николай',
           text: 'Да, сынок, ты молодец. Мы с мамой решили, что пора.'
         },
         {
@@ -30,7 +30,7 @@
           text: 'Ура! Я уже смотрел в интернете! Хочу вот тот, с большой камерой!'
         },
         {
-          speaker: 'Елена',
+          speaker: 'Екатерина',
           text: 'Хорошо. У нас есть ещё 3 000 рублей. Их можно потратить на защиту телефона или аксессуары.'
         },
         {
@@ -38,11 +38,11 @@
           text: 'А что такое защита?'
         },
         {
-          speaker: 'Сергей',
+          speaker: 'Николай',
           text: 'Это как страховка. Если телефон упадёт и разобьётся — ремонт будет бесплатным.'
         },
         {
-          speaker: 'Елена',
+          speaker: 'Екатерина',
           text: 'Подумай хорошо. Ты можешь взять защиту, чехол или, например, наушники.'
         }
       ],
@@ -130,9 +130,9 @@
       title: '🏠 Дома',
       bg: '/images/stories/0+/razbilsya-telefon/broken-bg.jpg',
       characters: [
-        { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
-        { name: 'Елена', img: '/images/characters/elena/image.png', side: 'right' },
-        { name: 'Сергей', img: '/images/characters/sergey/image.png', side: 'right' }
+        { name: 'Лев', img: '/images/characters/lev/lev.png', side: 'left' },
+        { name: 'Екатерина', img: '/images/characters/ekaterina/ekaterina.png', side: 'right' },
+        { name: 'Николай', img: '/images/characters/nikolay/nikolay.png', side: 'right' } // папа
       ],
       dialogues: {
         withProtectionAndDropped: [
@@ -141,11 +141,11 @@
             text: 'Мам, пап... Я уронил телефон. Экран разбился...'
           },
           {
-            speaker: 'Елена',
+            speaker: 'Екатерина',
             text: 'Ой... Но у нас же есть защита! Помнишь?'
           },
           {
-            speaker: 'Сергей',
+            speaker: 'Николай',
             text: 'Вот видишь, не зря мы её взяли. Сейчас всё решим.'
           },
           {
@@ -153,7 +153,7 @@
             text: 'И что теперь делать?'
           },
           {
-            speaker: 'Елена',
+            speaker: 'Екатерина',
             text: 'Отправим документы агенту — ремонт будет бесплатным!'
           }
         ],
@@ -163,11 +163,11 @@
             text: 'Мам, пап, я сегодня чуть телефон не уронил!'
           },
           {
-            speaker: 'Елена',
+            speaker: 'Екатерина',
             text: 'Ой, слава богу! Видишь, зачем мы взяли защиту?'
           },
           {
-            speaker: 'Сергей',
+            speaker: 'Николай',
             text: 'Молодец, что поймал. А если бы не успел — телефон был бы цел благодаря страховке.'
           },
           {
@@ -181,11 +181,11 @@
             text: 'Мам, пап... Я уронил телефон. Экран разбился...'
           },
           {
-            speaker: 'Елена',
+            speaker: 'Екатерина',
             text: 'Ох, Лев... Ремонт стоит 6 000 рублей.'
           },
           {
-            speaker: 'Сергей',
+            speaker: 'Николай',
             text: 'Жаль, что мы не взяли защиту. Теперь придётся копить.'
           },
           {
@@ -233,8 +233,8 @@
       title: '📞 Страховой агент',
       bg: '/images/stories/0+/razbilsya-telefon/agent-chat-bg.jpg',
       characters: [
-        { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
-        { name: 'Агент', img: '/images/characters/mikhail/image.png', side: 'right' }
+        { name: 'Лев', img: '/images/characters/lev/lev.png', side: 'left' },
+        { name: 'Агент', img: '/images/characters/mikhail/mikhail.png', side: 'right' }
       ],
       available: 'withProtectionAndDropped',
       dialogues: [
@@ -274,9 +274,9 @@
       title: '📖 Вывод',
       bg: '/images/stories/0+/razbilsya-telefon/bedroom-bg.jpg',
       characters: [
-        { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
-        { name: 'Елена', img: '/images/characters/elena/image.png', side: 'right' },
-        { name: 'Сергей', img: '/images/characters/sergey/image.png', side: 'right' }
+        { name: 'Лев', img: '/images/characters/lev/lev.png', side: 'left' },
+        { name: 'Екатерина', img: '/images/characters/ekaterina/ekaterina.png', side: 'right' },
+        { name: 'Николай', img: '/images/characters/nikolay/nikolay.png', side: 'right' } // папа
       ],
       dialogues: {
         withProtectionAndDropped: [
@@ -285,11 +285,11 @@
             text: 'Теперь я понял: защита — это как щит!'
           },
           {
-            speaker: 'Елена',
+            speaker: 'Екатерина',
             text: 'Мы рады, что ты это усвоил.'
           },
           {
-            speaker: 'Сергей',
+            speaker: 'Николай',
             text: 'Платить немного сейчас, чтобы не платить много потом — хороший урок.'
           }
         ],
@@ -299,11 +299,11 @@
             text: 'Защита нужна, даже если ты осторожен.'
           },
           {
-            speaker: 'Елена',
+            speaker: 'Екатерина',
             text: 'Верно. С ней спокойнее.'
           },
           {
-            speaker: 'Сергей',
+            speaker: 'Николай',
             text: 'Главное, что телефон цел, а опыт получен.'
           }
         ],
@@ -317,7 +317,7 @@
             text: 'Ничего, в следующий раз будешь умнее.'
           },
           {
-            speaker: 'Сергей',
+            speaker: 'Николай',
             text: 'Это ценный урок. Зато теперь ты точно запомнишь.'
           }
         ]
