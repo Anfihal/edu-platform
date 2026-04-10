@@ -383,11 +383,11 @@
 }
 
 .widget-btn[data-icon="chat"] {
-    background-image: url('icons/chat.png');
+    background-image: url('../icons/chat.png');
 }
 
 .widget-btn[data-icon="phone"] {
-    background-image: url('icons/phone.png');
+    background-image: url('../icons/phone.png');
 }
 
 .story-progress {
