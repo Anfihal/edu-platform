@@ -1,16 +1,47 @@
-# React + Vite
+🛡️ Страховой квест
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Интерактивные истории о страховании для детей и подростков атакже ребят 18+. Игроки проходят сцены, делают выбор, проходят мини‑игры и узнают, как страховка помогает в реальной жизни.
 
-Currently, two official plugins are available:
+🚀 Технологии
+React + Vite
+React Router (HashRouter)
+CSS Modules
+GitHub Pages для хостинга
+Также есть тг под с ml частью
+📦 Локальный запуск
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+bash
+git clone https://github.com/Anfihal/edu-platform.git
+cd edu-platform
+npm install
+npm run dev
 
-## React Compiler
+Откройте http://localhost:5173
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🏗️ Сборка
 
-## Expanding the ESLint configuration
+bash
+npm run build
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🌐 Деплой на GitHub Pages
+
+Автоматический деплой настроен через GitHub Actions. При пуше в ветку main проект собирается и публикуется на https://anfihal.github.io/edu-platform/.
+
+📁 Структура
+src/pages/ – компоненты страниц (AgeHome, StoryReader)
+src/pages/age-/stories//story.js – файлы историй
+public/images/ – персонажи, фоны, иконки
+
+✍️ Добавление новой истории
+
+1. Создайте папку в src/pages/age-X/stories/название/
+2. Добавьте файл story.js по образцу существующих
+3. Фоны и персонажи поместите в public/images/
+4. Добавьте запись в AGE_CONTENT
+
+📝 Лицензия
+
+Проект создан для компании Ингосстрах.
+
+
+
