@@ -48,11 +48,19 @@
 
 .character {
     position: relative;
-    height: 85vh;
+    height: 90vh;
     max-width: 45%;
     transition: all var(--transition-fast);
     display: flex;
     align-items: flex-end;
+}
+
+.character.left {
+    justify-content: flex-start;
+}
+
+.character.right {
+    justify-content: flex-end;
 }
 
 .character img {
@@ -63,12 +71,20 @@
     filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
 }
 
-.character.left {
-    justify-content: flex-start;
-}
+@media (max-width: 768px) {
+    .characters-container {
+        gap: 3%;
+        /* гарантированное расстояние между персонажами */
+    }
 
-.character.right {
-    justify-content: flex-end;
+
+    /* Для самых узких экранов */
+    @media (max-width: 480px) {
+
+        .characters-container {
+            gap: 2%;
+        }
+    }
 }
 
 /* ===== ДИАЛОГОВОЕ ОКНО ===== */
