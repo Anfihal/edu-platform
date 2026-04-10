@@ -10,10 +10,10 @@
     {
       id: 1,
       title: '🏠 Дома',
-      bg: '/images/stories/0+/strakhovanie-personazha/home-bg.png',
+      bg: 'images/stories/0+/strakhovanie-personazha/home-bg.png',
       characters: [
-        { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
-        { name: 'Мурка', img: '/images/characters/murka/image.png', side: 'right' }
+        { name: 'Лев', img: 'images/characters/lev/lev.png', side: 'left' },
+        { name: 'Мурка', img: 'images/characters/murka/murka.png', side: 'right' }
       ],
       dialogues: [
         {
@@ -46,10 +46,10 @@
     {
       id: 2,
       title: '👩 Мама помогает',
-      bg: '/images/stories/0+/strakhovanie-personazha/home-bg.png',
+      bg: 'images/stories/0+/strakhovanie-personazha/home-bg.png',
       characters: [
-        { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
-        { name: 'Елена', img: '/images/characters/elena/image.png', side: 'right' }
+        { name: 'Лев', img: 'images/characters/lev/lev.png', side: 'left' },
+        { name: 'Екатерина', img: 'images/characters/ekaterina/ekaterina.png', side: 'right' },
       ],
       dialogues: [
         {
@@ -57,15 +57,15 @@
           text: 'Мама! Мой герой потерял всё в игре!'
         },
         {
-          speaker: 'Елена',
+          speaker: 'Екатерина',
           text: 'Не расстраивайся, Лев. Мы можем купить страховку (щит).'
         },
         {
-          speaker: 'Лев',
+          speaker: 'Екатерина',
           text: 'А что это?'
         },
         {
-          speaker: 'Елена',
+          speaker: 'Екатерина',
           text: 'Мы заплатим немного денег сейчас. А если случится «страховой случай», то есть беда, страховая компания поможет всё исправить.'
         }
       ],
@@ -95,13 +95,13 @@
       title: '🛡️ Страховка (щит) куплена',
       bg: '/images/stories/0+/strakhovanie-personazha/shop-bg.png',
       characters: [
-        { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
-        { name: 'Елена', img: '/images/characters/elena/image.png', side: 'right' }
+        { name: 'Лев', img: 'images/characters/lev/lev.png', side: 'left' },
+        { name: 'Екатерина', img: 'images/characters/ekaterina/ekaterina.png', side: 'right' },
       ],
       available: 'withProtection', // показывается только если купили страховку
       dialogues: [
         {
-          speaker: 'Елена',
+          speaker: 'Екатерина',
           text: 'Вот и страховка! Теперь, если с героем что-то случится, компания вернёт всё обратно.'
         },
         {
@@ -125,11 +125,11 @@
     // ═══════════════════════════════════════════════════════════
     {
       id: 4,
-      title: '😢 Без страховки',
-      bg: '/images/stories/0+/strakhovanie-personazha/home-bg.png',
+      title: 'Без страховки',
+      bg: 'images/stories/0+/strakhovanie-personazha/home-bg.png',
       characters: [
-        { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
-        { name: 'Елена', img: '/images/characters/elena/image.png', side: 'right' }
+        { name: 'Лев', img: 'images/characters/lev/lev.png', side: 'left' },
+        { name: 'Екатерина', img: 'images/characters/ekaterina/ekaterina.png', side: 'right' },
       ],
       available: 'withoutProtection',
       dialogues: [
@@ -138,7 +138,7 @@
           text: 'Я не купил страховку (щит)... И герой потерял всё навсегда.'
         },
         {
-          speaker: 'Елена',
+          speaker: 'Екатерина',
           text: 'Ничего, давай попробуем ещё раз! Может, всё-таки купим страховку?'
         }
       ],
@@ -168,11 +168,11 @@
     {
       id: 5,
       title: '📖 Вывод',
-      bg: '/images/stories/0+/strakhovanie-personazha/home-bg.png',
+      bg: 'images/stories/0+/strakhovanie-personazha/home-bg.png',
       characters: [
-        { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
-        { name: 'Елена', img: '/images/characters/elena/image.png', side: 'right' },
-        { name: 'Мурка', img: '/images/characters/murka/image.png', side: 'right' }
+        { name: 'Лев', img: 'images/characters/lev/lev.png', side: 'left' },
+        { name: 'Екатерина', img: 'images/characters/ekaterina/ekaterina.png', side: 'right' },
+        { name: 'Мурка', img: 'images/characters/murka/murka.png', side: 'right' }
       ],
       dialogues: {
         withProtection: [
@@ -181,7 +181,7 @@
             text: 'Я понял! Страховка (щит) помогает и в игре, и в жизни!'
           },
           {
-            speaker: 'Елена',
+            speaker: 'Екатерина',
             text: 'Молодец! Лучше заплатить немного сейчас, чтобы потом не потерять всё.'
           },
           {
@@ -195,7 +195,7 @@
             text: 'Я не купил страховку, но понял, что она важна.'
           },
           {
-            speaker: 'Елена',
+            speaker: 'Екатерина',
             text: 'В следующий раз обязательно попробуем со страховкой!'
           },
           {
@@ -205,13 +205,7 @@
         ]
       },
       choices: [
-        {
-          id: 'finish',
-          title: 'Завершить историю',
-          price: 0,
-          description: '',
-          icon: 'trophy'
-        }
+        { id: 'finish', title: 'Завершить историю', price: 0, description: '', icon: 'trophy' }
       ]
     }
   ],

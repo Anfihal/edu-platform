@@ -76,8 +76,8 @@
       title: '🏫 Школа — Перемена',
       bg: 'images/stories/0+/razbilsya-telefon/school-bg.png',
       characters: [
-        { name: 'Лев', img: 'images/characters/lev/image.png', side: 'left' },
-        { name: 'Соня', img: 'images/characters/sofia/image.png', side: 'right' }
+        { name: 'Лев', img: 'images/characters/lev/levp.png', side: 'left' },
+        { name: 'Соня', img: 'images/characters/sonya/sonya.png', side: 'right' }
       ],
       dialogues: [
         {
@@ -219,7 +219,7 @@
             title: 'Копить на ремонт',
             price: 0,
             description: '6 000 ₽',
-            icon: 'piggy'
+            icon: 'money'
           }
         ]
       }

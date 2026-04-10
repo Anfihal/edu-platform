@@ -305,15 +305,15 @@
 
 /* Картинки для каждой истории — через data-story-id */
 .age-home[data-age="0+"] .story-card[data-story-id="1"] .story-image {
-    background-image: url('images/stories/0+/razbilsya-telefon/bg.png');
+    background-image: url('images/stories/0+/razbilsya-telefon/shop-bg.png');
 }
 
 .age-home[data-age="0+"] .story-card[data-story-id="2"] .story-image {
-    background-image: url('images/stories/0+/poteryalsya-character/bg.png');
+    background-image: url('images/stories/0+/strakhovanie-personazha/home-bg.png');
 }
 
 .age-home[data-age="0+"] .story-card[data-story-id="3"] .story-image {
-    background-image: url('images/stories/0+/slomalas-igrushka/bg.png');
+    background-image: url('images/stories/0+/robot-insurance/fire-bg.png');
 }
 
 .age-home[data-age="0+"] .story-card[data-story-id="4"] .story-image {
@@ -321,51 +321,51 @@
 }
 
 .age-home[data-age="12+"] .story-card[data-story-id="1"] .story-image {
-    background-image: url('images/stories/12+/razbil-telefon/bg.jpg');
+    background-image: url('images/stories/12+/razbityy-telefon-na-dr/repair-bg.png');
 }
 
 .age-home[data-age="12+"] .story-card[data-story-id="2"] .story-image {
-    background-image: url('images/stories/12+/otmena-poezdki/bg.jpg');
+    background-image: url('images/stories/12+/otmena-poezdki/storm-bg.png');
 }
 
 .age-home[data-age="12+"] .story-card[data-story-id="3"] .story-image {
-    background-image: url('images/stories/12+/travma-sport/bg.jpg');
+    background-image: url('images/stories/12+/travma-na-sekcii/gym-bg.png');
 }
 
 .age-home[data-age="12+"] .story-card[data-story-id="4"] .story-image {
-    background-image: url('images/stories/12+/vzlom-akkaunta/bg.jpg');
+    background-image: url('images/stories/12+/vzlom-akkaunta/school-bg.png');
 }
 
 .age-home[data-age="16+"] .story-card[data-story-id="1"] .story-image {
-    background-image: url('images/stories/16+/ukrali-smartfon/bg.jpg');
+    background-image: url('images/stories/16+/ukrali-smartfon/police-bg.png');
 }
 
 .age-home[data-age="16+"] .story-card[data-story-id="2"] .story-image {
-    background-image: url('images/stories/16+/otmena-kontserta/bg.jpg');
+    background-image: url('images/stories/16+/otmena-kontserta/sunset-bg.png');
 }
 
 .age-home[data-age="16+"] .story-card[data-story-id="3"] .story-image {
-    background-image: url('images/stories/16+/puteshestvie/bg.jpg');
+    background-image: url('images/stories/16+/puteshestvie/istanbul-street-bg.png');
 }
 
 .age-home[data-age="16+"] .story-card[data-story-id="4"] .story-image {
-    background-image: url('images/stories/16+/extreme-sport/bg.jpg');
+    background-image: url('images/stories/16+/extreme-sport/mountain-bg.png');
 }
 
 .age-home[data-age="18+"] .story-card[data-story-id="1"] .story-image {
-    background-image: url('images/stories/18+/strakhovanie-ustroystva/bg.jpg');
+    background-image: url('images/stories/18+/strakhovanie-ustroystva/room-bg.png');
 }
 
 .age-home[data-age="18+"] .story-card[data-story-id="2"] .story-image {
-    background-image: url('images/stories/18+/otmena-meropriyatiya/bg.jpg');
+    background-image: url('images/stories/18+/otmena-posvyata/cafe-bg.png');
 }
 
 .age-home[data-age="18+"] .story-card[data-story-id="3"] .story-image {
-    background-image: url('images/stories/18+/strakhovanie-puteshestviya/bg.jpg');
+    background-image: url('images/stories/18+/otpusk-mechty/beach-party-bg.png');
 }
 
 .age-home[data-age="18+"] .story-card[data-story-id="4"] .story-image {
-    background-image: url('images/stories/18+/zashchita-cifrovykh-aktivov/bg.jpg');
+    background-image: url('images/stories/18+/zashchita-cifrovykh-aktivov/hacker-screen-bg.png');
 }
 
 /* ===== ИНФОРМАЦИЯ НА КАРТОЧКЕ ===== */
