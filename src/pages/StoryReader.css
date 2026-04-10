@@ -244,77 +244,97 @@
 }
 
 /* ✅ РЕАЛЬНЫЕ ИКОНКИ ЧЕРЕЗ URL */
+/* ===== ИКОНКИ ДЛЯ ВЫБОРОВ (С ПРАВИЛЬНЫМИ ПУТЯМИ ../icons/) ===== */
 .choice-card[data-icon="shield"] .choice-icon {
-    background-image: url('icons/shield.png');
+    background-image: url('../icons/shield.png');
 }
 
 .choice-card[data-icon="case"] .choice-icon {
-    background-image: url('icons/case.png');
+    background-image: url('../icons/case.png');
 }
 
 .choice-card[data-icon="headphones"] .choice-icon {
-    background-image: url('icons/headphones.png');
+    background-image: url('../icons/headphones.png');
 }
 
 .choice-card[data-icon="document"] .choice-icon {
-    background-image: url('icons/document.png');
+    background-image: url('../icons/document.png');
 }
 
 .choice-card[data-icon="piggy"] .choice-icon {
-    background-image: url('/icons/piggy.png');
+    background-image: url('../icons/piggy.png');
 }
 
 .choice-card[data-icon="heart"] .choice-icon {
-    background-image: url('icons/heart.png');
+    background-image: url('../icons/heart.png');
 }
 
 .choice-card[data-icon="eye"] .choice-icon {
-    background-image: url('icons/eye.png');
+    background-image: url('../icons/eye.png');
 }
 
-.choice-card[data-icon="money"] .choice-icon {
-    background-image: url('icons/money.png');
-}
-
-/* Добавить в раздел иконок */
 .choice-card[data-icon="help"] .choice-icon {
-    background-image: url('icons/help.png');
+    background-image: url('../icons/help.png');
 }
 
 .choice-card[data-icon="trophy"] .choice-icon {
-    background-image: url('icons/trophy.png');
+    background-image: url('../icons/trophy.png');
 }
 
 .choice-card[data-icon="gamepad"] .choice-icon {
-    background-image: url('images/icons/gamepad.png');
+    background-image: url('../icons/gamepad.png');
 }
 
 .choice-card[data-icon="cross"] .choice-icon {
-    background-image: url('icons/cross.png');
+    background-image: url('../icons/cross.png');
 }
 
 .choice-card[data-icon="restart"] .choice-icon {
-    background-image: url('icons/restart.png');
-}
-
-.choice-card[data-icon="restart"] .choice-icon {
-    background-image: url('/images/icons/restart.png');
-}
-
-.choice-card[data-icon="heart"] .choice-icon {
-    background-image: url('/images/icons/heart.png');
+    background-image: url('../icons/restart.png');
 }
 
 .choice-card[data-icon="medical"] .choice-icon {
-    background-image: url('/images/icons/medical.png');
+    background-image: url('../icons/medical.png');
 }
 
 .choice-card[data-icon="paw"] .choice-icon {
-    background-image: url('/images/icons/paw.png');
+    background-image: url('../icons/paw.png');
 }
 
-.choice-card[data-icon="cross"] .choice-icon {
-    background-image: url('/images/icons/cross.png');
+.choice-card[data-icon="info"] .choice-icon {
+    background-image: url('../icons/info.png');
+}
+
+.choice-card[data-icon="arrow"] .choice-icon {
+    background-image: url('../icons/arrow.png');
+}
+
+.choice-card[data-icon="cake"] .choice-icon {
+    background-image: url('../icons/cake.png');
+}
+
+.choice-card[data-icon="backpack"] .choice-icon {
+    background-image: url('../icons/backpack.png');
+}
+
+.choice-card[data-icon="car"] .choice-icon {
+    background-image: url('../icons/car.png');
+}
+
+.choice-card[data-icon="police"] .choice-icon {
+    background-image: url('../icons/police.png');
+}
+
+.choice-card[data-icon="camp"] .choice-icon {
+    background-image: url('../icons/camp.png');
+}
+
+.choice-card[data-icon="beer"] .choice-icon {
+    background-image: url('../icons/beer.png');
+}
+
+.choice-card[data-icon="search"] .choice-icon {
+    background-image: url('../icons/search.png');
 }
 
 .choice-price {
