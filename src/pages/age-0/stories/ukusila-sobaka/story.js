@@ -9,8 +9,8 @@
     // ═══════════════════════════════════════════════════════════
     {
       id: 1,
-      title: '🎁 Подарок',
-      bg: '/images/stories/0+/labrador-insurance/living-room-bg.jpg',
+      title: ' Подарок',
+      bg: 'images/stories/0+/labrador-insurance/living-room-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Артём', img: '/images/characters/artem/image.png', side: 'right' },
@@ -58,8 +58,8 @@
     // ═══════════════════════════════════════════════════════════
     {
       id: 2,
-      title: '🌳 Прогулка',
-      bg: '/images/stories/0+/labrador-insurance/park-bg.jpg',
+      title: ' Прогулка',
+      bg: 'images/stories/0+/labrador-insurance/park-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Дружок', img: '/images/characters/labrador/image.png', side: 'left' },
@@ -100,8 +100,8 @@
     // ═══════════════════════════════════════════════════════════
     {
       id: 3,
-      title: '😲 Укус',
-      bg: '/images/stories/0+/labrador-insurance/park-bg.jpg',
+      title: ' Укус',
+      bg: 'images/stories/0+/labrador-insurance/park-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Дружок', img: '/images/characters/labrador/image.png', side: 'left' },
@@ -142,8 +142,8 @@
     // ═══════════════════════════════════════════════════════════
     {
       id: 4,
-      title: '🏥 Ветеринар',
-      bg: '/images/stories/0+/labrador-insurance/vet-bg.jpg',
+      title: 'Ветеринар',
+      bg: 'images/stories/0+/labrador-insurance/vet-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Дружок', img: '/images/characters/labrador/image.png', side: 'left' },
@@ -197,8 +197,8 @@
     // ═══════════════════════════════════════════════════════════
     {
       id: 5,
-      title: '✅ Страховка помогла',
-      bg: '/images/stories/0+/labrador-insurance/vet-bg.jpg',
+      title: 'Страховка помогла',
+      bg: 'images/stories/0+/labrador-insurance/vet-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Дружок', img: '/images/characters/labrador/image.png', side: 'left' },
@@ -235,8 +235,8 @@
     // ═══════════════════════════════════════════════════════════
     {
       id: 6,
-      title: '💸 Без страховки',
-      bg: '/images/stories/0+/labrador-insurance/vet-bg.jpg',
+      title: 'Без страховки',
+      bg: 'images/stories/0+/labrador-insurance/vet-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Дружок', img: '/images/characters/labrador/image.png', side: 'left' },
@@ -281,8 +281,8 @@
     // ═══════════════════════════════════════════════════════════
     {
       id: 7,
-      title: '📖 Урок',
-      bg: '/images/stories/0+/labrador-insurance/park-bg.jpg',
+      title: 'Урок',
+      bg: 'images/stories/0+/labrador-insurance/park-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Дружок', img: '/images/characters/labrador/image.png', side: 'left' },

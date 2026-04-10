@@ -10,7 +10,7 @@
     {
       id: 1,
       title: '🤖 Новая игрушка',
-      bg: '/images/stories/0+/robot-insurance/room-bg.jpg',
+      bg: 'images/stories/0+/robot-insurance/room-bg.png',
       characters: [
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
         { name: 'Елена', img: '/images/characters/elena/image.png', side: 'right' }
@@ -57,7 +57,7 @@
     {
       id: 2,
       title: '🔥 Пожар!',
-      bg: '/images/stories/0+/robot-insurance/fire-bg.jpg',
+      bg: 'images/stories/0+/robot-insurance/fire-bg.png',
       characters: [
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'right' }
@@ -107,7 +107,7 @@
     {
       id: 3,
       title: '💰 Страховка помогла',
-      bg: '/images/stories/0+/robot-insurance/shop-bg.jpg',
+      bg: 'images/stories/0+/robot-insurance/shop-bg.png',
       characters: [
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
         { name: 'Елена', img: '/images/characters/elena/image.png', side: 'right' }
@@ -144,7 +144,7 @@
     {
       id: 4,
       title: '😢 Без страховки',
-      bg: '/images/stories/0+/robot-insurance/room-bg.jpg',
+      bg: 'images/stories/0+/robot-insurance/room-bg.png',
       characters: [
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
         { name: 'Елена', img: '/images/characters/elena/image.png', side: 'right' }
@@ -186,7 +186,7 @@
     {
       id: 5,
       title: '📖 Урок',
-      bg: '/images/stories/0+/robot-insurance/room-bg.jpg',
+      bg: 'images/stories/0+/robot-insurance/room-bg.png',
       characters: [
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
         { name: 'Елена', img: '/images/characters/elena/image.png', side: 'right' },

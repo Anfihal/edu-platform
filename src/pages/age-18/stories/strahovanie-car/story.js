@@ -10,7 +10,7 @@ export default {
         {
             id: 1,
             title: '🚗 Новая тачка',
-            bg: '/images/stories/18+/pocarannaya-mashina/parking-day-bg.jpg',
+            bg: 'images/stories/18+/pocarannaya-mashina/parking-day-bg.png',
             characters: [
                 { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
                 { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }
@@ -50,7 +50,7 @@ export default {
         {
             id: 2,
             title: '🍷 Ужин при свечах',
-            bg: '/images/stories/18+/pocarannaya-mashina/restaurant-bg.jpg',
+            bg: 'images/stories/18+/pocarannaya-mashina/restaurant-bg.png',
             characters: [
                 { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
                 { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }
@@ -90,7 +90,7 @@ export default {
         {
             id: 3,
             title: '💔 Сюрприз на парковке',
-            bg: '/images/stories/18+/pocarannaya-mashina/parking-morning-bg.jpg',
+            bg: 'images/stories/18+/pocarannaya-mashina/parking-morning-bg.png',
             characters: [
                 { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
                 { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }
@@ -130,7 +130,7 @@ export default {
         {
             id: 4,
             title: '👮‍♂️ В участке',
-            bg: '/images/stories/18+/pocarannaya-mashina/police-bg.jpg',
+            bg: 'images/stories/18+/pocarannaya-mashina/police-bg.png',
             characters: [
                 { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
                 { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }
@@ -180,7 +180,7 @@ export default {
         {
             id: 5,
             title: '✅ Справедливость',
-            bg: '/images/stories/18+/pocarannaya-mashina/repair-bg.jpg',
+            bg: 'images/stories/18+/pocarannaya-mashina/repair-bg.png',
             characters: [
                 { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
                 { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }
@@ -228,7 +228,7 @@ export default {
         {
             id: 6,
             title: '😢 Горький опыт',
-            bg: '/images/stories/18+/pocarannaya-mashina/repair-bg.jpg',
+            bg: 'images/stories/18+/pocarannaya-mashina/repair-bg.png',
             characters: [
                 { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
                 { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }
@@ -269,7 +269,7 @@ export default {
         {
             id: 7,
             title: '❤️ Новая глава',
-            bg: '/images/stories/18+/pocarannaya-mashina/sunset-road-bg.jpg',
+            bg: 'images/stories/18+/pocarannaya-mashina/sunset-road-bg.png',
             characters: [
                 { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
                 { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }

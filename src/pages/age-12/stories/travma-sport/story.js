@@ -10,7 +10,7 @@
     {
       id: 1,
       title: '🤸 Гимнастика',
-      bg: '/images/stories/12+/travma-na-sekcii/gym-bg.jpg',
+      bg: 'images/stories/12+/travma-na-sekcii/gym-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' },
@@ -47,7 +47,7 @@
     {
       id: 2,
       title: '🛡️ Страховка спортсмена',
-      bg: '/images/stories/12+/travma-na-sekcii/gym-bg.jpg',
+      bg: 'images/stories/12+/travma-na-sekcii/gym-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Артём', img: '/images/characters/artem/image.png', side: 'right' }
@@ -90,7 +90,7 @@
     {
       id: 3,
       title: '⚠️ Сложный элемент',
-      bg: '/images/stories/12+/travma-na-sekcii/gym-bg.jpg',
+      bg: 'images/stories/12+/travma-na-sekcii/gym-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -140,7 +140,7 @@
     {
       id: 4,
       title: '🏥 В больнице',
-      bg: '/images/stories/12+/travma-na-sekcii/hospital-bg.jpg',
+      bg: 'images/stories/12+/travma-na-sekcii/hospital-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -204,7 +204,7 @@
     {
       id: 5,
       title: '💔 Дорогой урок',
-      bg: '/images/stories/12+/travma-na-sekcii/hospital-bg.jpg',
+      bg: 'images/stories/12+/travma-na-sekcii/hospital-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -245,7 +245,7 @@
     {
       id: 6,
       title: '📖 Выздоровление',
-      bg: '/images/stories/12+/travma-na-sekcii/park-bg.jpg',
+      bg: 'images/stories/12+/travma-na-sekcii/park-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }

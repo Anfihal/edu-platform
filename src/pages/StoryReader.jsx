@@ -334,7 +334,7 @@ export default function StoryReader() {
     }, [storyData, currentScene, gameState.hasProtection, gameState.phoneDropped]);
 
     if (loading) return <section className="story-reader loading-state"><div className="loading-spinner">Загрузка истории...</div></section>;
-    if (error || !storyData) return <section className="story-reader error-state"><div className="error-message"><h2>История не найдена</h2><p>{error || 'Неизвестная ошибка'}</p><button onClick={() => navigate(`/age/${decodedAge}/home`)}>← Назад к историям</button></div></section>;
+    if (error || !storyData) return <section className="story-reader error-state"><div className="error-message"><h2>История не найдена</h2><p>{error || 'Неизвестная ошибка'}</p><button onClick={() => navigate(`/age/${decodedAge}/home`)}> Назад к историям</button></div></section>;
 
     if (storyComplete) {
         const spentBudget = (storyData.budget || 0) - gameState.budget;
@@ -364,7 +364,7 @@ export default function StoryReader() {
                         </div>
                     </div>
                 </div>
-                <button className="back-btn-small" onClick={() => navigate(`/age/${decodedAge}/home`)}>← Назад</button>
+                <button className="back-btn-small" onClick={() => navigate(`/age/${decodedAge}/home`)}>Назад</button>
             </div>
         );
     }
@@ -402,7 +402,7 @@ export default function StoryReader() {
                         </>
                     )}
                     <div className="dialogue-buttons">
-                        {dialogueIndex > 0 && <button className="dialogue-btn secondary" onClick={handlePrev} disabled={isTransitioning}>← Назад</button>}
+                        {dialogueIndex > 0 && <button className="dialogue-btn secondary" onClick={handlePrev} disabled={isTransitioning}>Назад</button>}
                         {!showChoices && !activeGame && (
                             <button className="dialogue-btn" onClick={handleNext} disabled={isTransitioning}>
                                 {(() => {
@@ -454,7 +454,7 @@ export default function StoryReader() {
             <div className="story-progress" role="progressbar">
                 {storyData.scenes.map((_, i) => <div key={i} className={`progress-dot ${i === currentScene ? 'active' : ''} ${i < currentScene ? 'completed' : ''}`} />)}
             </div>
-            <button className="back-btn-small" onClick={() => navigate(`/age/${decodedAge}/home`)}>← Назад</button>
+            <button className="back-btn-small" onClick={() => navigate(`/age/${decodedAge}/home`)}>Назад</button>
         </div>
     );
 }

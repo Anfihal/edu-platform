@@ -10,7 +10,7 @@
     {
       id: 1,
       title: '🏠 Дома',
-      bg: '/images/stories/0+/strakhovanie-personazha/home-bg.jpg',
+      bg: '/images/stories/0+/strakhovanie-personazha/home-bg.png',
       characters: [
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
         { name: 'Мурка', img: '/images/characters/murka/image.png', side: 'right' }
@@ -46,7 +46,7 @@
     {
       id: 2,
       title: '👩 Мама помогает',
-      bg: '/images/stories/0+/strakhovanie-personazha/home-bg.jpg',
+      bg: '/images/stories/0+/strakhovanie-personazha/home-bg.png',
       characters: [
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
         { name: 'Елена', img: '/images/characters/elena/image.png', side: 'right' }
@@ -93,7 +93,7 @@
     {
       id: 3,
       title: '🛡️ Страховка (щит) куплена',
-      bg: '/images/stories/0+/strakhovanie-personazha/shop-bg.jpg',
+      bg: '/images/stories/0+/strakhovanie-personazha/shop-bg.png',
       characters: [
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
         { name: 'Елена', img: '/images/characters/elena/image.png', side: 'right' }
@@ -126,7 +126,7 @@
     {
       id: 4,
       title: '😢 Без страховки',
-      bg: '/images/stories/0+/strakhovanie-personazha/home-bg.jpg',
+      bg: '/images/stories/0+/strakhovanie-personazha/home-bg.png',
       characters: [
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
         { name: 'Елена', img: '/images/characters/elena/image.png', side: 'right' }
@@ -168,7 +168,7 @@
     {
       id: 5,
       title: '📖 Вывод',
-      bg: '/images/stories/0+/strakhovanie-personazha/home-bg.jpg',
+      bg: '/images/stories/0+/strakhovanie-personazha/home-bg.png',
       characters: [
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
         { name: 'Елена', img: '/images/characters/elena/image.png', side: 'right' },

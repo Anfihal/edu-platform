@@ -10,7 +10,7 @@
     {
       id: 1,
       title: '🏔️ Идея для свидания',
-      bg: '/images/stories/16+/extreme-sport/cafe-bg.jpg',
+      bg: 'images/stories/16+/extreme-sport/cafe-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -46,7 +46,7 @@
     {
       id: 2,
       title: '💻 Поиск в интернете',
-      bg: '/images/stories/16+/extreme-sport/cafe-bg.jpg',
+      bg: 'images/stories/16+/extreme-sport/cafe-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -101,7 +101,7 @@
     {
       id: 3,
       title: '🚵‍♂️ Экстремальный спуск',
-      bg: '/images/stories/16+/extreme-sport/mountain-bg.jpg',
+      bg: 'images/stories/16+/extreme-sport/mountain-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -151,7 +151,7 @@
     {
       id: 4,
       title: '💔 На эмоциях',
-      bg: '/images/stories/16+/extreme-sport/mountain-bg.jpg',
+      bg: 'images/stories/16+/extreme-sport/mountain-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -222,8 +222,8 @@
     // ═══════════════════════════════════════════════════════════
     {
       id: 5,
-      title: '😢 Горький опыт',
-      bg: '/images/stories/16+/extreme-sport/mountain-bg.jpg',
+      title: 'Горький опыт',
+      bg: 'images/stories/16+/extreme-sport/mountain-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -264,7 +264,7 @@
     {
       id: 6,
       title: '❤️ Главный урок',
-      bg: '/images/stories/16+/extreme-sport/sunset-bg.jpg',
+      bg: 'images/stories/16+/extreme-sport/sunset-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }

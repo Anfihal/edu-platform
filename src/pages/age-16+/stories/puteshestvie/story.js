@@ -10,7 +10,7 @@
     {
       id: 1,
       title: '🛫 Странное начало',
-      bg: '/images/stories/16+/puteshestvie/airport-bg.jpg',
+      bg: 'images/stories/16+/puteshestvie/airport-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
@@ -52,7 +52,7 @@
     {
       id: 2,
       title: '🛡️ Тревожный выбор',
-      bg: '/images/stories/16+/puteshestvie/airport-bg.jpg',
+      bg: 'images/stories/16+/puteshestvie/airport-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }
@@ -95,7 +95,7 @@
     {
       id: 3,
       title: '👀 Пропажа',
-      bg: '/images/stories/16+/puteshestvie/airport-bg.jpg',
+      bg: 'images/stories/16+/puteshestvie/airport-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
@@ -215,7 +215,7 @@
     {
       id: 5,
       title: '🏃 Погоня',
-      bg: '/images/stories/16+/puteshestvie/istanbul-street-bg.jpg',
+      bg: 'images/stories/16+/puteshestvie/istanbul-street-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }
@@ -265,7 +265,7 @@
     {
       id: 6,
       title: '🔓 Разгадка',
-      bg: '/images/stories/16+/puteshestvie/istanbul-bg.jpg',
+      bg: 'images/stories/16+/puteshestvie/istanbul-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },

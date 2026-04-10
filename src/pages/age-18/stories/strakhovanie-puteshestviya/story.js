@@ -10,7 +10,7 @@
     {
       id: 1,
       title: '💼 Лето впахивания',
-      bg: '/images/stories/18+/otpusk-mechty/cafe-work-bg.jpg',
+      bg: 'images/stories/18+/otpusk-mechty/cafe-work-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
@@ -59,7 +59,7 @@
     {
       id: 2,
       title: '✈️ Задержка рейса',
-      bg: '/images/stories/18+/otpusk-mechty/airport-bg.jpg',
+      bg: 'images/stories/18+/otpusk-mechty/airport-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },

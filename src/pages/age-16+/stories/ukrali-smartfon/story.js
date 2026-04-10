@@ -10,7 +10,7 @@
     {
       id: 1,
       title: '🏫 Школьное утро',
-      bg: '/images/stories/16+/ukrali-smartfon/school-bg.jpg',
+      bg: 'images/stories/16+/ukrali-smartfon/school-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
@@ -52,7 +52,7 @@
     {
       id: 2,
       title: '🛡️ Рискнуть или защитить',
-      bg: '/images/stories/16+/ukrali-smartfon/school-bg.jpg',
+      bg: 'images/stories/16+/ukrali-smartfon/school-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'right' }
@@ -95,7 +95,7 @@
     {
       id: 3,
       title: '🚨 Пропажа',
-      bg: '/images/stories/16+/ukrali-smartfon/locker-room-bg.jpg',
+      bg: 'images/stories/16+/ukrali-smartfon/locker-room-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' },
@@ -150,7 +150,7 @@
     {
       id: 4,
       title: '👮 В участке',
-      bg: '/images/stories/16+/ukrali-smartfon/police-bg.jpg',
+      bg: 'images/stories/16+/ukrali-smartfon/police-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'right' }
@@ -218,7 +218,7 @@
     {
       id: 5,
       title: '💸 Дорогой урок',
-      bg: '/images/stories/16+/ukrali-smartfon/school-bg.jpg',
+      bg: 'images/stories/16+/ukrali-smartfon/school-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'right' }
@@ -259,7 +259,7 @@
     {
       id: 6,
       title: '📱 Урок усвоен',
-      bg: '/images/stories/16+/ukrali-smartfon/school-bg.jpg',
+      bg: 'images/stories/16+/ukrali-smartfon/school-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },

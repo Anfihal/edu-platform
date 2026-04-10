@@ -10,7 +10,7 @@
     {
       id: 1,
       title: '🎉 День рождения',
-      bg: '/images/stories/12+/razbityy-telefon-na-dr/party-bg.jpg',
+      bg: 'images/stories/12+/razbityy-telefon-na-dr/party-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'center' },
         { name: 'Елена', img: '/images/characters/elena/image.png', side: 'right' },
@@ -51,7 +51,7 @@
     {
       id: 2,
       title: '🛡️ Страховка',
-      bg: '/images/stories/12+/razbityy-telefon-na-dr/party-bg.jpg',
+      bg: 'images/stories/12+/razbityy-telefon-na-dr/party-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Елена', img: '/images/characters/elena/image.png', side: 'right' }
@@ -94,7 +94,7 @@
     {
       id: 3,
       title: '📱 Любопытство',
-      bg: '/images/stories/12+/razbityy-telefon-na-dr/party-bg.jpg',
+      bg: 'images/stories/12+/razbityy-telefon-na-dr/party-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -148,7 +148,7 @@
     {
       id: 4,
       title: '😰 Неловкий момент',
-      bg: '/images/stories/12+/razbityy-telefon-na-dr/party-bg.jpg',
+      bg: 'images/stories/12+/razbityy-telefon-na-dr/party-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' },
@@ -216,7 +216,7 @@
     {
       id: 5,
       title: '💬 Разговор',
-      bg: '/images/stories/12+/razbityy-telefon-na-dr/party-bg.jpg',
+      bg: '/images/stories/12+/razbityy-telefon-na-dr/party-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -236,7 +236,7 @@
     {
       id: 6,
       title: '✅ Страховка спасла',
-      bg: '/images/stories/12+/razbityy-telefon-na-dr/repair-bg.jpg',
+      bg: 'images/stories/12+/razbityy-telefon-na-dr/repair-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -272,7 +272,7 @@
     {
       id: 7,
       title: '💔 Без страховки',
-      bg: '/images/stories/12+/razbityy-telefon-na-dr/repair-bg.jpg',
+      bg: 'images/stories/12+/razbityy-telefon-na-dr/repair-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -316,7 +316,7 @@
     {
       id: 8,
       title: '📖 Вывод',
-      bg: '/images/stories/12+/razbityy-telefon-na-dr/party-bg.jpg',
+      bg: '/images/stories/12+/razbityy-telefon-na-dr/party-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }

@@ -10,7 +10,7 @@
     {
       id: 1,
       title: '🌊 Планы на лето',
-      bg: '/images/stories/12+/otmena-poezdki/room-bg.jpg',
+      bg: 'images/stories/12+/otmena-poezdki/room-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' },
@@ -52,7 +52,7 @@
     {
       id: 2,
       title: '🛡️ Страховка для поездки',
-      bg: '/images/stories/12+/otmena-poezdki/room-bg.jpg',
+      bg: 'images/stories/12+/otmena-poezdki/room-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Артём', img: '/images/characters/artem/image.png', side: 'right' }
@@ -95,7 +95,7 @@
     {
       id: 3,
       title: '⚠️ Неожиданность',
-      bg: '/images/stories/12+/otmena-poezdki/storm-bg.jpg',
+      bg: 'images/stories/12+/otmena-poezdki/storm-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -145,7 +145,7 @@
     {
       id: 4,
       title: '📞 Звонок организатору',
-      bg: '/images/stories/12+/otmena-poezdki/room-bg.jpg',
+      bg: '/images/stories/12+/otmena-poezdki/room-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Артём', img: '/images/characters/artem/image.png', side: 'right' }
@@ -209,7 +209,7 @@
     {
       id: 5,
       title: '💸 Горький опыт',
-      bg: '/images/stories/12+/otmena-poezdki/room-bg.jpg',
+      bg: 'images/stories/12+/otmena-poezdki/room-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -250,7 +250,7 @@
     {
       id: 6,
       title: '📖 Итоги',
-      bg: '/images/stories/12+/otmena-poezdki/beach-bg.jpg',
+      bg: 'images/stories/12+/otmena-poezdki/beach-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }

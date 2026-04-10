@@ -10,7 +10,7 @@
     {
       id: 1,
       title: '🎓 Посвят',
-      bg: '/images/stories/18+/otmena-posvyata/campus-bg.jpg',
+      bg: 'images/stories/18+/otmena-posvyata/campus-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }
@@ -50,7 +50,7 @@
     {
       id: 2,
       title: '🛡️ Взрослое решение',
-      bg: '/images/stories/18+/otmena-posvyata/cafe-bg.jpg',
+      bg: 'images/stories/18+/otmena-posvyata/cafe-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }
@@ -93,7 +93,7 @@
     {
       id: 3,
       title: '⚠️ Форс-мажор',
-      bg: '/images/stories/18+/otmena-posvyata/phone-bg.jpg',
+      bg: 'images/stories/18+/otmena-posvyata/phone-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }
@@ -143,7 +143,7 @@
     {
       id: 4,
       title: '📞 Звонок в страховую',
-      bg: '/images/stories/18+/otmena-posvyata/living-room-bg.jpg',
+      bg: 'images/stories/18+/otmena-posvyata/living-room-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }
@@ -191,7 +191,7 @@
     {
       id: 5,
       title: '❤️ Искорка',
-      bg: '/images/stories/18+/otmena-posvyata/bedroom-bg.jpg',
+      bg: 'images/stories/18+/otmena-posvyata/bedroom-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }
@@ -239,7 +239,7 @@
     {
       id: 6,
       title: '☀️ Утро',
-      bg: '/images/stories/18+/otmena-posvyata/bedroom-morning-bg.jpg',
+      bg: 'images/stories/18+/otmena-posvyata/bedroom-bg.jpg',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }

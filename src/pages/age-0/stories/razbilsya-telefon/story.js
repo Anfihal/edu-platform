@@ -10,7 +10,7 @@
     {
       id: 1,
       title: '🏪 Магазин электроники',
-      bg: 'images/stories/0+/razbilsya-telefon/shop-bg.jpg',
+      bg: 'images/stories/0+/razbilsya-telefon/shop-bg.png',
       characters: [
         { name: 'Лев', img: 'images/characters/lev/lev.png', side: 'left' },
         { name: 'Екатерина', img: 'images/characters/ekaterina/ekaterina.png', side: 'right' },
@@ -74,7 +74,7 @@
     {
       id: 2,
       title: '🏫 Школа — Перемена',
-      bg: 'images/stories/0+/razbilsya-telefon/school-bg.jpg',
+      bg: 'images/stories/0+/razbilsya-telefon/school-bg.png',
       characters: [
         { name: 'Лев', img: 'images/characters/lev/image.png', side: 'left' },
         { name: 'Соня', img: 'images/characters/sofia/image.png', side: 'right' }
@@ -128,7 +128,7 @@
     {
       id: 3,
       title: '🏠 Дома',
-      bg: 'images/stories/0+/razbilsya-telefon/broken-bg.jpg',
+      bg: 'images/stories/0+/razbilsya-telefon/broken-bg.png',
       characters: [
         { name: 'Лев', img: 'images/characters/lev/lev.png', side: 'left' },
         { name: 'Екатерина', img: 'images/characters/ekaterina/ekaterina.png', side: 'right' },
@@ -231,7 +231,7 @@
     {
       id: 4,
       title: '📞 Страховой агент',
-      bg: 'images/stories/0+/razbilsya-telefon/agent-chat-bg.jpg',
+      bg: 'images/stories/0+/razbilsya-telefon/agent-chat-bg.png',
       characters: [
         { name: 'Лев', img: 'images/characters/lev/lev.png', side: 'left' },
         { name: 'Агент', img: 'images/characters/mikhail/mikhail.png', side: 'right' }
@@ -272,7 +272,7 @@
     {
       id: 5,
       title: '📖 Вывод',
-      bg: 'images/stories/0+/razbilsya-telefon/bedroom-bg.jpg',
+      bg: 'images/stories/0+/razbilsya-telefon/bedroom-bg.png',
       characters: [
         { name: 'Лев', img: 'images/characters/lev/lev.png', side: 'left' },
         { name: 'Екатерина', img: 'images/characters/ekaterina/ekaterina.png', side: 'right' },

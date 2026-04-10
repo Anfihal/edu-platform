@@ -10,7 +10,7 @@
     {
       id: 1,
       title: '💻 Разговор в школе',
-      bg: '/images/stories/12+/vzlom-akkaunta/school-bg.jpg',
+      bg: 'images/stories/12+/vzlom-akkaunta/school-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -18,7 +18,7 @@
       dialogues: [
         {
           speaker: 'Соня',
-          text: 'Слышал, у нас в параллели кому-то взломали страницу ВКонтакте? Говорят, за последний год взломов стало в два раза больше.'
+          text: 'Слышал, у нас в параллели кому-то взломали страницу ВКонтакте и аккаунт в Максе? Говорят, за последний год взломов стало в два раза больше.'
         },
         {
           speaker: 'Максим',
@@ -42,7 +42,7 @@
     {
       id: 2,
       title: '🛡️ Страховка от взлома',
-      bg: '/images/stories/12+/vzlom-akkaunta/school-bg.jpg',
+      bg: 'images/stories/12+/vzlom-akkaunta/school-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -85,7 +85,7 @@
     {
       id: 3,
       title: '🎣 Фишинг!',
-      bg: '/images/stories/12+/vzlom-akkaunta/school-bg.jpg',
+      bg: 'images/stories/12+/vzlom-akkaunta/school-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -135,7 +135,7 @@
     {
       id: 4,
       title: '💔 Последствия',
-      bg: '/images/stories/12+/vzlom-akkaunta/school-bg.jpg',
+      bg: 'images/stories/12+/vzlom-akkaunta/school-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -199,7 +199,7 @@
     {
       id: 5,
       title: '😢 Горький урок',
-      bg: '/images/stories/12+/vzlom-akkaunta/school-bg.jpg',
+      bg: 'images/stories/12+/vzlom-akkaunta/school-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -240,7 +240,7 @@
     {
       id: 6,
       title: '🔐 Урок усвоен',
-      bg: '/images/stories/12+/vzlom-akkaunta/school-bg.jpg',
+      bg: '/images/stories/12+/vzlom-akkaunta/school-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }

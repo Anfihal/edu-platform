@@ -28,7 +28,6 @@
 /* ===== ФОН ===== */
 .story-bg {
     position: absolute;
-    inset: 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -230,19 +229,19 @@
 
 /* ✅ РЕАЛЬНЫЕ ИКОНКИ ЧЕРЕЗ URL */
 .choice-card[data-icon="shield"] .choice-icon {
-    background-image: url('/icons/shield.png');
+    background-image: url('icons/shield.png');
 }
 
 .choice-card[data-icon="case"] .choice-icon {
-    background-image: url('/icons/case.png');
+    background-image: url('icons/case.png');
 }
 
 .choice-card[data-icon="headphones"] .choice-icon {
-    background-image: url('/icons/headphones.png');
+    background-image: url('icons/headphones.png');
 }
 
 .choice-card[data-icon="document"] .choice-icon {
-    background-image: url('/icons/document.png');
+    background-image: url('icons/document.png');
 }
 
 .choice-card[data-icon="piggy"] .choice-icon {
@@ -250,11 +249,11 @@
 }
 
 .choice-card[data-icon="heart"] .choice-icon {
-    background-image: url('/icons/heart.png');
+    background-image: url('icons/heart.png');
 }
 
 .choice-card[data-icon="eye"] .choice-icon {
-    background-image: url('/icons/eye.png');
+    background-image: url('icons/eye.png');
 }
 
 .choice-price {
@@ -281,7 +280,7 @@
 .story-widgets {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 10px;
     z-index: 100;
     display: flex;
     flex-direction: column;
@@ -303,11 +302,11 @@
 }
 
 .widget-btn[data-icon="chat"] {
-    background-image: url('/icons/chat.png');
+    background-image: url('icons/chat.png');
 }
 
 .widget-btn[data-icon="phone"] {
-    background-image: url('/icons/phone.png');
+    background-image: url('icons/phone.png');
 }
 
 .story-progress {
@@ -469,12 +468,7 @@
         width: 100%;
     }
 
-    .story-widgets {
-        top: auto;
-        bottom: 80px;
-        right: 20px;
-        flex-direction: row;
-    }
+
 
     .widget-btn {
         width: 46px;

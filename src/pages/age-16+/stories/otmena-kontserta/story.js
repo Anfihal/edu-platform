@@ -10,7 +10,7 @@
     {
       id: 1,
       title: '🎤 Планы на уикенд',
-      bg: '/images/stories/16+/otmena-kontserta/cafe-bg.jpg',
+      bg: 'images/stories/16+/otmena-kontserta/cafe-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' },
@@ -52,7 +52,7 @@
     {
       id: 2,
       title: '🛡️ Страховка от невыезда',
-      bg: '/images/stories/16+/otmena-kontserta/cafe-bg.jpg',
+      bg: 'images/stories/16+/otmena-kontserta/cafe-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -103,7 +103,7 @@
     {
       id: 3,
       title: '⚠️ Плохие новости',
-      bg: '/images/stories/16+/otmena-kontserta/station-bg.jpg',
+      bg: 'images/stories/16+/otmena-kontserta/station-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -153,7 +153,7 @@
     {
       id: 4,
       title: '💸 Финансовый итог',
-      bg: '/images/stories/16+/otmena-kontserta/cafe-bg.jpg',
+      bg: 'images/stories/16+/otmena-kontserta/cafe-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' },
@@ -231,7 +231,7 @@
     {
       id: 5,
       title: '😢 Горький урок',
-      bg: '/images/stories/16+/otmena-kontserta/cafe-bg.jpg',
+      bg: 'images/stories/16+/otmena-kontserta/cafe-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'right' }
@@ -272,7 +272,7 @@
     {
       id: 6,
       title: '❤️ Урок усвоен',
-      bg: '/images/stories/16+/otmena-kontserta/sunset-bg.jpg',
+      bg: 'images/stories/16+/otmena-kontserta/sunset-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
