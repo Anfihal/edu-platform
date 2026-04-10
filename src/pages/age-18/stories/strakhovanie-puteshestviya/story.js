@@ -97,7 +97,7 @@
     {
       id: 3,
       title: '🧳 Где мой чемодан?',
-      bg: '/images/stories/18+/otpusk-mechty/thailand-airport-bg.jpg',
+      bg: 'images/stories/18+/otpusk-mechty/thailand-airport-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'right' }
@@ -147,7 +147,7 @@
     {
       id: 4,
       title: '🍺 Вечеринка по-тайски',
-      bg: '/images/stories/18+/otpusk-mechty/beach-party-bg.jpg',
+      bg: 'images/stories/18+/otpusk-mechty/beach-party-bg.png',
       characters: [
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -179,7 +179,7 @@
     {
       id: 5,
       title: '🚔 В участке',
-      bg: '/images/stories/18+/otpusk-mechty/police-thai-bg.jpg',
+      bg: 'images/stories/18+/otpusk-mechty/police-thai-bg.png',
       characters: [
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }
@@ -223,7 +223,7 @@
     {
       id: 6,
       title: '💸 Дорогой отпуск',
-      bg: '/images/stories/18+/otpusk-mechty/hotel-room-bg.jpg',
+      bg: 'images/stories/18+/otpusk-mechty/hotel-room-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'right' }
@@ -264,7 +264,7 @@
     {
       id: 7,
       title: '🍹 Отпуск удался',
-      bg: '/images/stories/18+/otpusk-mechty/beach-sunset-bg.jpg',
+      bg: 'images/stories/18+/otpusk-mechty/beach-sunset-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },

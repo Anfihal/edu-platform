@@ -74,7 +74,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(10px);
     transform: scale(1.1);
 }
 
@@ -82,7 +81,6 @@
 .story-bg::after {
     content: '';
     position: absolute;
-    inset: 0;
     background: linear-gradient(180deg, rgba(102, 126, 234, 0.7) 0%, rgba(118, 75, 162, 0.85) 100%);
 }
 
@@ -307,67 +305,67 @@
 
 /* Картинки для каждой истории — через data-story-id */
 .age-home[data-age="0+"] .story-card[data-story-id="1"] .story-image {
-    background-image: url('/images/stories/0+/razbilsya-telefon/bg.png');
+    background-image: url('images/stories/0+/razbilsya-telefon/bg.png');
 }
 
 .age-home[data-age="0+"] .story-card[data-story-id="2"] .story-image {
-    background-image: url('/images/stories/0+/poteryalsya-character/bg.png');
+    background-image: url('images/stories/0+/poteryalsya-character/bg.png');
 }
 
 .age-home[data-age="0+"] .story-card[data-story-id="3"] .story-image {
-    background-image: url('/images/stories/0+/slomalas-igrushka/bg.png');
+    background-image: url('images/stories/0+/slomalas-igrushka/bg.png');
 }
 
 .age-home[data-age="0+"] .story-card[data-story-id="4"] .story-image {
-    background-image: url('/images/stories/0+/ukusila-sobaka/bg.png');
+    background-image: url('images/stories/0+/labrador-insurance/bg.png');
 }
 
 .age-home[data-age="12+"] .story-card[data-story-id="1"] .story-image {
-    background-image: url('/images/stories/12+/razbil-telefon/bg.jpg');
+    background-image: url('images/stories/12+/razbil-telefon/bg.jpg');
 }
 
 .age-home[data-age="12+"] .story-card[data-story-id="2"] .story-image {
-    background-image: url('/images/stories/12+/otmena-poezdki/bg.jpg');
+    background-image: url('images/stories/12+/otmena-poezdki/bg.jpg');
 }
 
 .age-home[data-age="12+"] .story-card[data-story-id="3"] .story-image {
-    background-image: url('/images/stories/12+/travma-sport/bg.jpg');
+    background-image: url('images/stories/12+/travma-sport/bg.jpg');
 }
 
 .age-home[data-age="12+"] .story-card[data-story-id="4"] .story-image {
-    background-image: url('/images/stories/12+/vzlom-akkaunta/bg.jpg');
+    background-image: url('images/stories/12+/vzlom-akkaunta/bg.jpg');
 }
 
 .age-home[data-age="16+"] .story-card[data-story-id="1"] .story-image {
-    background-image: url('/images/stories/16+/ukrali-smartfon/bg.jpg');
+    background-image: url('images/stories/16+/ukrali-smartfon/bg.jpg');
 }
 
 .age-home[data-age="16+"] .story-card[data-story-id="2"] .story-image {
-    background-image: url('/images/stories/16+/otmena-kontserta/bg.jpg');
+    background-image: url('images/stories/16+/otmena-kontserta/bg.jpg');
 }
 
 .age-home[data-age="16+"] .story-card[data-story-id="3"] .story-image {
-    background-image: url('/images/stories/16+/puteshestvie/bg.jpg');
+    background-image: url('images/stories/16+/puteshestvie/bg.jpg');
 }
 
 .age-home[data-age="16+"] .story-card[data-story-id="4"] .story-image {
-    background-image: url('/images/stories/16+/extreme-sport/bg.jpg');
+    background-image: url('images/stories/16+/extreme-sport/bg.jpg');
 }
 
 .age-home[data-age="18+"] .story-card[data-story-id="1"] .story-image {
-    background-image: url('/images/stories/18+/strakhovanie-ustroystva/bg.jpg');
+    background-image: url('images/stories/18+/strakhovanie-ustroystva/bg.jpg');
 }
 
 .age-home[data-age="18+"] .story-card[data-story-id="2"] .story-image {
-    background-image: url('/images/stories/18+/otmena-meropriyatiya/bg.jpg');
+    background-image: url('images/stories/18+/otmena-meropriyatiya/bg.jpg');
 }
 
 .age-home[data-age="18+"] .story-card[data-story-id="3"] .story-image {
-    background-image: url('/images/stories/18+/strakhovanie-puteshestviya/bg.jpg');
+    background-image: url('images/stories/18+/strakhovanie-puteshestviya/bg.jpg');
 }
 
 .age-home[data-age="18+"] .story-card[data-story-id="4"] .story-image {
-    background-image: url('/images/stories/18+/zashchita-cifrovykh-aktivov/bg.jpg');
+    background-image: url('images/stories/18+/zashchita-cifrovykh-aktivov/bg.jpg');
 }
 
 /* ===== ИНФОРМАЦИЯ НА КАРТОЧКЕ ===== */

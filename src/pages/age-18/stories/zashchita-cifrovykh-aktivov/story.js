@@ -10,7 +10,7 @@
     {
       id: 1,
       title: '🎮 Стартап на коленке',
-      bg: '/images/stories/18+/zashchita-cifrovykh-aktivov/garage-bg.jpg',
+      bg: 'images/stories/18+/zashchita-cifrovykh-aktivov/garage-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
@@ -59,7 +59,7 @@
     {
       id: 2,
       title: '🔥 Сервер лёг',
-      bg: '/images/stories/18+/zashchita-cifrovykh-aktivov/server-room-bg.jpg',
+      bg: 'images/stories/18+/zashchita-cifrovykh-aktivov/server-room-bg.png',
       characters: [
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -109,7 +109,7 @@
     {
       id: 3,
       title: '👾 Хакеры',
-      bg: '/images/stories/18+/zashchita-cifrovykh-aktivov/hacker-screen-bg.jpg',
+      bg: 'images/stories/18+/zashchita-cifrovykh-aktivov/hacker-screen-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'right' }
@@ -141,7 +141,7 @@
     {
       id: 4,
       title: '📞 Звонок в страховую',
-      bg: '/images/stories/18+/zashchita-cifrovykh-aktivov/office-bg.jpg',
+      bg: 'images/stories/18+/zashchita-cifrovykh-aktivov/office-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }
@@ -185,7 +185,7 @@
     {
       id: 5,
       title: '💸 Бизнес под угрозой',
-      bg: '/images/stories/18+/zashchita-cifrovykh-aktivov/broken-server-bg.jpg',
+      bg: 'images/stories/18+/zashchita-cifrovykh-aktivov/broken-server-bg.png',
       characters: [
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'right' }
@@ -226,7 +226,7 @@
     {
       id: 6,
       title: '🏆 Игра продолжается',
-      bg: '/images/stories/18+/zashchita-cifrovykh-aktivov/success-party-bg.jpg',
+      bg: 'images/stories/18+/zashchita-cifrovykh-aktivov/success-party-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },

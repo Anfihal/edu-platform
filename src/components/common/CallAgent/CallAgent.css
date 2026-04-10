@@ -29,21 +29,18 @@
 .avatar-circle {
     width: 120px;
     height: 120px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 60px;
-    margin: 0 auto 24px;
+    margin: 0 auto 34px;
     animation: pulse 2s ease-in-out infinite;
 }
 
 /* ✅ ИКОНКА АГЕНТА В CSS */
 .avatar-circle[data-icon="agent"]::before {
-    content: '👨‍💼';
-    font-size: 64px;
+    content: url('icons/agent.png');
+    font-size: 40px;
 }
 
 @keyframes pulse {
@@ -133,23 +130,44 @@
 
 /* ✅ ИКОНКИ КНОПОК В CSS */
 .action-btn[data-icon="mic"]::before {
-    content: '🎤';
-    font-size: 28px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url('/icons/mic.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .action-btn[data-icon="mic-off"]::before {
-    content: '🔇';
-    font-size: 28px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url('/icons/mic-off.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .action-btn[data-icon="volume-up"]::before {
-    content: '🔊';
-    font-size: 28px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url('/icons/volume-up.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .action-btn[data-icon="volume-down"]::before {
-    content: '🔉';
-    font-size: 28px;
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url('/icons/volume-down.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .action-btn span {
@@ -196,8 +214,14 @@
 }
 
 .call-btn[data-icon="phone-off"]::before {
-    content: '📴';
-    font-size: 24px;
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url('/icons/phone-off.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .call-start {

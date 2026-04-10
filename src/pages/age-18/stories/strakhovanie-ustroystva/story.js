@@ -10,7 +10,7 @@
     {
       id: 1,
       title: '🏕️ Сборы',
-      bg: '/images/stories/18+/pohod-s-tekhnikoy/room-bg.jpg',
+      bg: 'images/stories/18+/pohod-s-tekhnikoy/room-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
@@ -59,7 +59,7 @@
     {
       id: 2,
       title: '🌲 В лесу',
-      bg: '/images/stories/18+/pohod-s-tekhnikoy/forest-bg.jpg',
+      bg: 'images/stories/18+/pohod-s-tekhnikoy/forest-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
@@ -101,7 +101,7 @@
     {
       id: 3,
       title: '🔥 Вечер у костра',
-      bg: '/images/stories/18+/pohod-s-tekhnikoy/campfire-bg.jpg',
+      bg: 'images/stories/18+/pohod-s-tekhnikoy/campfire-bg.png',
       characters: [
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -151,7 +151,7 @@
     {
       id: 4,
       title: '👀 Кража',
-      bg: '/images/stories/18+/pohod-s-tekhnikoy/forest-night-bg.jpg',
+      bg: 'images/stories/18+/pohod-s-tekhnikoy/forest-night-bg.png',
       characters: [
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'left' },
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'right' }
@@ -201,7 +201,7 @@
     {
       id: 5,
       title: '📞 Звонок в страховую',
-      bg: '/images/stories/18+/pohod-s-tekhnikoy/tent-bg.jpg',
+      bg: 'images/stories/18+/pohod-s-tekhnikoy/tent-bg.png',
       characters: [
         { name: 'Мария', img: '/images/characters/maria/image.png', side: 'left' },
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'right' }
@@ -249,7 +249,7 @@
     {
       id: 6,
       title: '💸 Дорогой поход',
-      bg: '/images/stories/18+/pohod-s-tekhnikoy/campfire-bg.jpg',
+      bg: 'images/stories/18+/pohod-s-tekhnikoy/campfire-bg.png',
       characters: [
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
         { name: 'Соня', img: '/images/characters/sofia/image.png', side: 'right' }
@@ -290,7 +290,7 @@
     {
       id: 7,
       title: '🏆 Отдых удался',
-      bg: '/images/stories/18+/pohod-s-tekhnikoy/lake-bg.jpg',
+      bg: 'images/stories/18+/pohod-s-tekhnikoy/lake-bg.png',
       characters: [
         { name: 'Максим', img: '/images/characters/maksim/image.png', side: 'left' },
         { name: 'Лев', img: '/images/characters/lev/image.png', side: 'left' },
