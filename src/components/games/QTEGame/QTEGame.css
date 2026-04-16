@@ -38,7 +38,7 @@
 
 /* ✅ ИКОНКА GAMEPAD В CSS */
 .qte-game-header h2[data-icon="gamepad"]::before {
-    content: '🎮';
+    background-image: url("/icons/gamepad.png");
     font-size: 32px;
 }
 
@@ -119,17 +119,17 @@
 
 /* ✅ ИКОНКИ КНОПКИ В CSS */
 .qte-action-btn[data-icon="tap"]::before {
-    content: '👆';
+    background-image: url("/icons/tap.png");
     font-size: 40px;
 }
 
 .qte-action-btn[data-icon="check"]::before {
-    content: '✅';
+    background-image: url("/icons/check.png");
     font-size: 40px;
 }
 
 .qte-action-btn[data-icon="cross"]::before {
-    content: '❌';
+    background-image: url("/icons/cross.png");
     font-size: 40px;
 }
 
@@ -163,7 +163,7 @@
 
 /* ✅ ИКОНКИ РЕЗУЛЬТАТА В CSS */
 .qte-result p[data-icon="trophy"]::before {
-    content: '🏆';
+    background-image: url("/icons/trophy.png");
     font-size: 48px;
 }
 
