@@ -9,9 +9,9 @@
       title: '🎉 День рождения',
       bg: 'images/stories/12+/razbityy-telefon-na-dr/party-bg.png',
       characters: [
-        { name: 'Мария', img: 'images/characters/maria/maria.png', side: 'center' },
+        { name: 'Мария', img: 'images/characters/maria/maria.png', side: 'left' },
         { name: 'Елена', img: 'images/characters/elena/elena.png', side: 'right' },
-        { name: 'Иван', img: 'images/characters/ivan/ivan.png', side: 'left' }
+        { name: 'Иван', img: 'images/characters/ivan/ivan.png', side: 'right' }
       ],
       dialogues: [
         { speaker: 'Елена', text: 'С днём рождения, Мария! Мы с папой решили подарить тебе новый телефон.' },
