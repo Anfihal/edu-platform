@@ -44,6 +44,7 @@
     justify-content: space-between;
     align-items: flex-end;
     padding: 0 2%;
+    /* Базовый отступ от краёв на десктопе */
 }
 
 .character {
@@ -71,19 +72,60 @@
     filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
 }
 
+/* Уменьшенный рост Льва и Сони на десктопе */
+.character img[src*="lev/"],
+.character img[src*="sonya/"] {
+    height: 70vh;
+}
+
+/* ===== ПЛАНШЕТЫ (до 768px) ===== */
 @media (max-width: 768px) {
     .characters-container {
-        gap: 3%;
-        /* гарантированное расстояние между персонажами */
+        gap: 6%;
+        /* Расстояние между персонажами */
+        padding: 0 0.5%;
+        /* Равные отступы слева и справа */
     }
 
+    /* Все персонажи, кроме Льва и Сони, вырастают вверх */
+    .character:not(:has(img[src*="lev/"])):not(:has(img[src*="sonya/"])) {
+        height: 100vh;
+    }
 
-    /* Для самых узких экранов */
-    @media (max-width: 480px) {
+    /* Лев и Соня остаются маленькими */
+    .character:has(img[src*="lev/"]),
+    .character:has(img[src*="sonya/"]) {
+        height: 60vh;
+    }
 
-        .characters-container {
-            gap: 2%;
-        }
+    .character img[src*="lev/"],
+    .character img[src*="sonya/"] {
+        height: 60vh;
+    }
+}
+
+/* ===== ТЕЛЕФОНЫ (до 480px) ===== */
+@media (max-width: 480px) {
+    .characters-container {
+        gap: 5%;
+        /* Расстояние между персонажами */
+        padding: 0 0.5%;
+        /* Равные отступы слева и справа */
+    }
+
+    /* Остальные персонажи ещё выше */
+    .character:not(:has(img[src*="lev/"])):not(:has(img[src*="sonya/"])) {
+        height: 90vh;
+    }
+
+    .character:has(img[src*="lev/"]),
+    .character:has(img[src*="sonya/"]) {
+        height: 60vh;
+    }
+
+    .character img[src*="lev/"],
+    .character img[src*="sonya/"] {
+        height: 50vh;
     }
 }
 
