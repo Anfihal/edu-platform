@@ -34,17 +34,17 @@
     z-index: 1;
 }
 
-/* ===== КОНТЕЙНЕР ПЕРСОНАЖЕЙ — ВЫРАВНИВАНИЕ ПО КРАЯМ ===== */
+/* ===== КОНТЕЙНЕР ПЕРСОНАЖЕЙ — ДЕСКТОП: РАВНЫЕ ОТСТУПЫ СО ВСЕХ СТОРОН ===== */
 .characters-container {
     position: absolute;
     inset: 0;
     z-index: 5;
     pointer-events: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    /* равные отступы слева, между и справа */
     align-items: flex-end;
-    padding: 0 2%;
-    /* Базовый отступ от краёв на десктопе */
+    padding: 0;
 }
 
 .character {
@@ -78,13 +78,17 @@
     height: 70vh;
 }
 
-/* ===== ПЛАНШЕТЫ (до 768px) ===== */
+/* Активный говорящий — на передний план */
+.character.active {
+    z-index: 15 !important;
+}
+
+/* ===== ПЛАНШЕТЫ (до 768px) — ДВА ПЕРСОНАЖА ПО КРАЯМ ===== */
 @media (max-width: 768px) {
     .characters-container {
-        gap: 50%;
-        /* Расстояние между персонажами */
+        /* персонажи по краям */
+        gap: 20%;
         padding: 0 0.5%;
-        /* Равные отступы слева и справа */
     }
 
     /* Все персонажи, кроме Льва и Сони, вырастают вверх */
@@ -104,28 +108,57 @@
     }
 }
 
-/* ===== ТЕЛЕФОНЫ (до 480px) ===== */
+/* ===== ТЕЛЕФОНЫ (до 480px) — ТОЛЬКО АКТИВНЫЙ ПЕРСОНАЖ СТРОГО ПО ЦЕНТРУ ===== */
 @media (max-width: 480px) {
     .characters-container {
-        gap: 50%;
-        /* Расстояние между персонажами */
-        padding: 0 0.5%;
-        /* Равные отступы слева и справа */
+        justify-content: center !important;
+        gap: 0;
+        padding: 0 !important;
     }
 
-    /* Остальные персонажи ещё выше */
-    .character:not(:has(img[src*="lev/"])):not(:has(img[src*="sonya/"])) {
-        height: 90vh;
+    /* Скрываем всех, кроме активного */
+    .character:not(.active) {
+        display: none !important;
     }
 
-    .character:has(img[src*="lev/"]),
-    .character:has(img[src*="sonya/"]) {
-        height: 60vh;
+    /* Активный персонаж — гарантированно по центру */
+    .characters-container .character.active {
+        position: absolute !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        bottom: 0;
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        max-height: 85vh;
+        z-index: 20;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
-    .character img[src*="lev/"],
-    .character img[src*="sonya/"] {
-        height: 50vh;
+    /* Сбрасываем все боковые привязки */
+    .character.left,
+    .character.right {
+        left: auto !important;
+        right: auto !important;
+        justify-content: center !important;
+    }
+
+    /* Изображение внутри активного персонажа */
+    .character.active img {
+        object-position: center bottom;
+        width: 100%;
+        height: auto;
+        max-height: 85vh;
+    }
+
+    /* Для Льва и Сони (если они активны) убираем фиксированную высоту */
+    .character.active img[src*="lev/"],
+    .character.active img[src*="sonya/"] {
+        height: auto;
+        max-height: 75vh;
+        width: 100%;
     }
 }
 

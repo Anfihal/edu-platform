@@ -6,7 +6,7 @@ import ChatWithAgent from '../components/common/ChatWithAgent/ChatWithAgent';
 import CallAgent from '../components/common/CallAgent/CallAgent';
 import './StoryReader.css';
 
-const DEBUG = false; // включите true для отладки
+const DEBUG = false;
 const log = (...args) => { if (DEBUG) console.log('[StoryReader]', ...args); };
 
 const storyModules = import.meta.glob('./age-*/stories/*/story.js', { eager: false });
@@ -71,6 +71,9 @@ export default function StoryReader() {
     const [showChoices, setShowChoices] = useState(false);
     const [storyComplete, setStoryComplete] = useState(false);
     const [rightCharacter, setRightCharacter] = useState(null);
+    // + добавлено
+    const [leftCharacter, setLeftCharacter] = useState(null);
+    const [activeSpeaker, setActiveSpeaker] = useState('');
 
     const transitionTimerRef = useRef(null);
     const gameCompleteTimerRef = useRef(null);
@@ -115,7 +118,10 @@ export default function StoryReader() {
                 setDialogueIndex(0);
                 setShowChoices(false);
                 setStoryComplete(false);
-                setRightCharacter(null); // сбрасываем при загрузке новой истории
+                setRightCharacter(null);
+                // + сброс новых состояний
+                setLeftCharacter(null);
+                setActiveSpeaker('');
             } catch (err) {
                 log('Ошибка загрузки:', err);
                 setError(err.message);
@@ -126,29 +132,36 @@ export default function StoryReader() {
         if (decodedAge && slug) loadStory();
     }, [decodedAge, slug]);
 
-    // Сброс при смене сцены (правого персонажа не трогаем)
+    // Сброс при смене сцены
     useEffect(() => {
         log(`Переход на сцену ${currentScene}`);
         setDialogueIndex(0);
         setShowChoices(false);
         setIsTransitioning(false);
         if (transitionTimerRef.current) clearTimeout(transitionTimerRef.current);
-        // rightCharacter остаётся тем же, если он есть в новой сцене, иначе скроется при первой же реплике
+        // + сброс активного говорящего
+        setActiveSpeaker('');
     }, [currentScene]);
 
-    // Обновление правого персонажа при смене реплики
+    // ~ Обновление левого, правого персонажа и активного говорящего при смене реплики
     useEffect(() => {
         const scene = storyData?.scenes?.[currentScene];
         if (!scene) return;
         const dialoguesArray = getDialoguesForScene(scene, gameState, currentScene);
         const dialogue = dialoguesArray[dialogueIndex];
         if (!dialogue) return;
+
         const speakerName = dialogue.speaker;
+        setActiveSpeaker(speakerName);
+
         const character = scene.characters?.find(c => c.name === speakerName);
-        if (character && character.side === 'right') {
-            setRightCharacter(character);
+        if (character) {
+            if (character.side === 'left') {
+                setLeftCharacter(character);
+            } else if (character.side === 'right') {
+                setRightCharacter(character);
+            }
         }
-        // если говорит левый или персонаж не правый – ничего не делаем, правый остаётся
     }, [currentScene, dialogueIndex, storyData, gameState]);
 
     const isSceneAvailable = useCallback(() => {
@@ -360,7 +373,7 @@ export default function StoryReader() {
                         </div>
                         <div className="complete-buttons">
                             <button className="complete-btn primary" data-icon="home" onClick={() => navigate(`/age/${decodedAge}/home`)}>В меню историй</button>
-                            <button className="complete-btn secondary" data-icon="restart" onClick={() => { setStoryComplete(false); setCurrentScene(0); setDialogueIndex(0); setGameState({ budget: storyData.budget || 3000, hasProtection: false, phoneDropped: false, miniGameResults: {}, choices: [] }); setRightCharacter(null); }}>Начать заново</button>
+                            <button className="complete-btn secondary" data-icon="restart" onClick={() => { setStoryComplete(false); setCurrentScene(0); setDialogueIndex(0); setGameState({ budget: storyData.budget || 3000, hasProtection: false, phoneDropped: false, miniGameResults: {}, choices: [] }); setRightCharacter(null); setLeftCharacter(null); setActiveSpeaker(''); }}>Начать заново</button>
                         </div>
                     </div>
                 </div>
@@ -383,15 +396,17 @@ export default function StoryReader() {
             <div className="story-bg" style={{ backgroundImage: bgImage ? `url(${bgImage})` : 'none' }}></div>
             {storyData.budget !== undefined && <PiggyBank budget={gameState.budget} />}
             <div className="characters-container">
-                {(() => {
-                    const leftChar = scene.characters?.find(c => c.side === 'left');
-                    return (
-                        <>
-                            {leftChar && <div className={`character left ${isTransitioning ? 'fade-out' : ''}`}><img src={leftChar.img} alt={leftChar.name} loading="lazy" /></div>}
-                            {rightCharacter && <div className={`character right ${isTransitioning ? 'fade-out' : ''}`}><img src={rightCharacter.img} alt={rightCharacter.name} loading="lazy" /></div>}
-                        </>
-                    );
-                })()}
+                {/* ~ изменено: используем leftCharacter и rightCharacter с классом active */}
+                {leftCharacter && (
+                    <div className={`character left ${activeSpeaker === leftCharacter.name ? 'active' : ''} ${isTransitioning ? 'fade-out' : ''}`}>
+                        <img src={leftCharacter.img} alt={leftCharacter.name} loading="lazy" />
+                    </div>
+                )}
+                {rightCharacter && (
+                    <div className={`character right ${activeSpeaker === rightCharacter.name ? 'active' : ''} ${isTransitioning ? 'fade-out' : ''}`}>
+                        <img src={rightCharacter.img} alt={rightCharacter.name} loading="lazy" />
+                    </div>
+                )}
             </div>
             <div className={`dialogue-box ${showChoices || activeGame ? 'dialogue-minimized' : ''}`}>
                 <div className="dialogue-content">
