@@ -32,21 +32,16 @@ const getDialoguesForScene = (scene, gameState, currentScene) => {
         return scene.dialoguesAfterGame[branch] || (Array.isArray(scene.dialogues) ? scene.dialogues : []);
     }
     if (scene.dialogues && typeof scene.dialogues === 'object' && !Array.isArray(scene.dialogues)) {
-        // Простые ветки (со страховкой / без страховки)
         if (gameState.hasProtection && scene.dialogues.withProtection)
             return scene.dialogues.withProtection;
         if (!gameState.hasProtection && scene.dialogues.withoutProtection)
             return scene.dialogues.withoutProtection;
 
-        // Ветки для телефона
         if (gameState.hasProtection && gameState.phoneDropped && scene.dialogues.withProtectionAndDropped)
             return scene.dialogues.withProtectionAndDropped;
         if (gameState.hasProtection && !gameState.phoneDropped && scene.dialogues.withProtectionAndCaught)
             return scene.dialogues.withProtectionAndCaught;
-        if (!gameState.hasProtection && scene.dialogues.withoutProtection)
-            return scene.dialogues.withoutProtection;
 
-        // Ветки для поездки
         if (gameState.hasProtection && gameState.tripCancelled && scene.dialogues.withProtectionAndTripCancelled)
             return scene.dialogues.withProtectionAndTripCancelled;
         if (gameState.hasProtection && !gameState.tripCancelled && scene.dialogues.withProtectionAndTripGoes)
@@ -59,13 +54,6 @@ const getDialoguesForScene = (scene, gameState, currentScene) => {
         return [];
     }
     return Array.isArray(scene.dialogues) ? scene.dialogues : [];
-};
-
-const useImagePreloader = (urls) => {
-    useEffect(() => {
-        if (!urls || urls.length === 0) return;
-        urls.forEach(url => { const img = new Image(); img.src = url; });
-    }, [urls]);
 };
 
 export default function StoryReader() {
@@ -98,6 +86,26 @@ export default function StoryReader() {
 
     const transitionTimerRef = useRef(null);
     const gameCompleteTimerRef = useRef(null);
+
+    // ----- ПРЕДЗАГРУЗКА ВСЕХ ИЗОБРАЖЕНИЙ ИСТОРИИ -----
+    const allImageUrls = useMemo(() => {
+        if (!storyData) return [];
+        const urls = new Set();
+        storyData.scenes.forEach(scene => {
+            if (scene.bg) urls.add(scene.bg);
+            scene.characters?.forEach(c => { if (c.img) urls.add(c.img); });
+        });
+        return [...urls];
+    }, [storyData]);
+
+    useEffect(() => {
+        if (allImageUrls.length === 0) return;
+        allImageUrls.forEach(url => {
+            const img = new Image();
+            img.src = url;
+        });
+    }, [allImageUrls]);
+    // -------------------------------------------------
 
     useEffect(() => {
         return () => {
@@ -236,20 +244,6 @@ export default function StoryReader() {
         }
     }, [currentScene, storyData, loading, isSceneAvailable, gameState, getNextSceneIndex]);
 
-    const preloadUrls = useMemo(() => {
-        if (!storyData) return [];
-        const scene = storyData.scenes[currentScene];
-        const nextScene = storyData.scenes[currentScene + 1];
-        const urls = [];
-        [scene, nextScene].forEach(s => {
-            if (!s) return;
-            if (s.bg) urls.push(s.bg);
-            s.characters?.forEach(c => { if (c.img) urls.push(c.img); });
-        });
-        return [...new Set(urls)];
-    }, [storyData, currentScene]);
-    useImagePreloader(preloadUrls);
-
     const handlePrev = useCallback(() => {
         if (isTransitioning || loading) return;
         if (dialogueIndex > 0) {
@@ -311,7 +305,6 @@ export default function StoryReader() {
         let updatedState;
         setGameState(prev => {
             const newState = { ...prev };
-            // Поддержка разных ID покупки страховки
             if (choice.id === 'protection' || choice.id === 'buyProtection') {
                 newState.budget -= choice.price;
                 newState.hasProtection = true;
@@ -365,13 +358,10 @@ export default function StoryReader() {
         if (!scene?.choices) return null;
         if (Array.isArray(scene.choices)) return scene.choices;
         if (typeof scene.choices === 'object') {
-            // Простые ветки
             if (gameState.hasProtection && scene.choices.withProtection) return scene.choices.withProtection;
             if (!gameState.hasProtection && scene.choices.withoutProtection) return scene.choices.withoutProtection;
-            // Телефон
             if (gameState.hasProtection && gameState.phoneDropped && scene.choices.withProtectionAndDropped) return scene.choices.withProtectionAndDropped;
             if (gameState.hasProtection && !gameState.phoneDropped && scene.choices.withProtectionAndCaught) return scene.choices.withProtectionAndCaught;
-            // Поездка
             if (gameState.hasProtection && gameState.tripCancelled && scene.choices.withProtectionAndTripCancelled) return scene.choices.withProtectionAndTripCancelled;
             if (gameState.hasProtection && !gameState.tripCancelled && scene.choices.withProtectionAndTripGoes) return scene.choices.withProtectionAndTripGoes;
             if (!gameState.hasProtection && gameState.tripCancelled && scene.choices.withoutProtectionAndTripCancelled) return scene.choices.withoutProtectionAndTripCancelled;
@@ -389,7 +379,7 @@ export default function StoryReader() {
         const miniGamesWon = Object.values(gameState.miniGameResults).filter(r => r).length;
         return (
             <div className="story-reader story-complete">
-                <div className="story-bg" style={{ backgroundImage: `url(${storyData.scenes?.[storyData.scenes.length - 1]?.bg || storyData.bg || ''})` }}></div>
+                <div className="story-bg" style={{ backgroundImage: `url(${storyData.scenes?.[storyData.scenes.length - 1]?.bg || storyData.bg || ''})` }} fetchpriority="high"></div>
                 <div className="complete-overlay fade-in">
                     <div className="complete-card">
                         <div className="complete-icon" data-icon="trophy"></div>
@@ -427,7 +417,7 @@ export default function StoryReader() {
 
     return (
         <div className={`story-reader interactive ${isTransitioning ? 'transitioning' : ''} ${showChoices ? 'showing-choices' : ''}`}>
-            <div className="story-bg" style={{ backgroundImage: bgImage ? `url(${bgImage})` : 'none' }}></div>
+            <div className="story-bg" style={{ backgroundImage: bgImage ? `url(${bgImage})` : 'none' }} fetchpriority="high"></div>
             {storyData.budget !== undefined && <PiggyBank budget={gameState.budget} />}
             <div className="characters-container">
                 {leftCharacter && (
