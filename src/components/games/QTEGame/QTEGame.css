@@ -36,10 +36,15 @@
     height: 40px;
 }
 
-/* ✅ ИКОНКА GAMEPAD В CSS */
 .qte-game-header h2[data-icon="gamepad"]::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
     background-image: url("/icons/gamepad.png");
-    font-size: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* ✅ КНОПКА ЗАКРЫТИЯ В CSS */
@@ -55,10 +60,17 @@
 }
 
 .qte-close[data-icon="close"]::before {
-    content: '✕';
-    font-size: 20px;
-    font-weight: 700;
-    color: #FFFFFF;
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("/icons/cross.png");
+    /* если есть своя иконка */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Если иконки нет, можно оставить символ ✕ */
+    /* content: '✕'; font-size: 20px; color: white; */
 }
 
 .qte-close:hover {
@@ -119,18 +131,36 @@
 
 /* ✅ ИКОНКИ КНОПКИ В CSS */
 .qte-action-btn[data-icon="tap"]::before {
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 50px;
     background-image: url("/icons/tap.png");
-    font-size: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .qte-action-btn[data-icon="check"]::before {
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 50px;
     background-image: url("/icons/check.png");
-    font-size: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .qte-action-btn[data-icon="cross"]::before {
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 50px;
     background-image: url("/icons/cross.png");
-    font-size: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .qte-action-btn:hover:not(:disabled) {
@@ -163,13 +193,26 @@
 
 /* ✅ ИКОНКИ РЕЗУЛЬТАТА В CSS */
 .qte-result p[data-icon="trophy"]::before {
+    content: '';
+    display: inline-block;
+    width: 60px;
+    height: 60px;
     background-image: url("/icons/trophy.png");
-    font-size: 48px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .qte-result p[data-icon="broken"]::before {
-    content: '💔';
-    font-size: 48px;
+    content: '';
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-image: url("/icons/broken.png");
+    /* или другой файл */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .qte-result[data-result="success"] {
