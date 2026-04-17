@@ -55,7 +55,7 @@
     width: 100vw;
     height: 100vh;
     height: 100dvh;
-    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(180deg, #ad81ff 0%, #1034ff 100%);
     color: #FFFFFF;
     overflow: hidden;
     margin: 0;
@@ -370,6 +370,9 @@
     background-image: url('../images/stories/18+/zashchita-cifrovykh-aktivov/hacker-screen-bg.png');
 }
 
+.age-home[data-age="18+"] .story-card[data-story-id="5"] .story-image {
+    background-image: url('../images/stories/18+/pocarannaya-mashina/parking-day-bg.png');
+}
 
 /* ===== ИНФОРМАЦИЯ НА КАРТОЧКЕ ===== */
 .story-info {
