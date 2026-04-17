@@ -32,9 +32,30 @@ const getDialoguesForScene = (scene, gameState, currentScene) => {
         return scene.dialoguesAfterGame[branch] || (Array.isArray(scene.dialogues) ? scene.dialogues : []);
     }
     if (scene.dialogues && typeof scene.dialogues === 'object' && !Array.isArray(scene.dialogues)) {
-        if (gameState.hasProtection && gameState.phoneDropped && scene.dialogues.withProtectionAndDropped) return scene.dialogues.withProtectionAndDropped;
-        if (gameState.hasProtection && !gameState.phoneDropped && scene.dialogues.withProtectionAndCaught) return scene.dialogues.withProtectionAndCaught;
-        if (!gameState.hasProtection && scene.dialogues.withoutProtection) return scene.dialogues.withoutProtection;
+        // Простые ветки (со страховкой / без страховки)
+        if (gameState.hasProtection && scene.dialogues.withProtection)
+            return scene.dialogues.withProtection;
+        if (!gameState.hasProtection && scene.dialogues.withoutProtection)
+            return scene.dialogues.withoutProtection;
+
+        // Ветки для телефона
+        if (gameState.hasProtection && gameState.phoneDropped && scene.dialogues.withProtectionAndDropped)
+            return scene.dialogues.withProtectionAndDropped;
+        if (gameState.hasProtection && !gameState.phoneDropped && scene.dialogues.withProtectionAndCaught)
+            return scene.dialogues.withProtectionAndCaught;
+        if (!gameState.hasProtection && scene.dialogues.withoutProtection)
+            return scene.dialogues.withoutProtection;
+
+        // Ветки для поездки
+        if (gameState.hasProtection && gameState.tripCancelled && scene.dialogues.withProtectionAndTripCancelled)
+            return scene.dialogues.withProtectionAndTripCancelled;
+        if (gameState.hasProtection && !gameState.tripCancelled && scene.dialogues.withProtectionAndTripGoes)
+            return scene.dialogues.withProtectionAndTripGoes;
+        if (!gameState.hasProtection && gameState.tripCancelled && scene.dialogues.withoutProtectionAndTripCancelled)
+            return scene.dialogues.withoutProtectionAndTripCancelled;
+        if (!gameState.hasProtection && !gameState.tripCancelled && scene.dialogues.withoutProtectionAndTripGoes)
+            return scene.dialogues.withoutProtectionAndTripGoes;
+
         return [];
     }
     return Array.isArray(scene.dialogues) ? scene.dialogues : [];
@@ -60,6 +81,7 @@ export default function StoryReader() {
         budget: 3000,
         hasProtection: false,
         phoneDropped: false,
+        tripCancelled: false,
         miniGameResults: {},
         choices: []
     });
@@ -71,7 +93,6 @@ export default function StoryReader() {
     const [showChoices, setShowChoices] = useState(false);
     const [storyComplete, setStoryComplete] = useState(false);
     const [rightCharacter, setRightCharacter] = useState(null);
-    // + добавлено
     const [leftCharacter, setLeftCharacter] = useState(null);
     const [activeSpeaker, setActiveSpeaker] = useState('');
 
@@ -111,6 +132,7 @@ export default function StoryReader() {
                     budget: data.budget ?? 3000,
                     hasProtection: false,
                     phoneDropped: false,
+                    tripCancelled: false,
                     miniGameResults: {},
                     choices: []
                 }));
@@ -119,7 +141,6 @@ export default function StoryReader() {
                 setShowChoices(false);
                 setStoryComplete(false);
                 setRightCharacter(null);
-                // + сброс новых состояний
                 setLeftCharacter(null);
                 setActiveSpeaker('');
             } catch (err) {
@@ -132,18 +153,15 @@ export default function StoryReader() {
         if (decodedAge && slug) loadStory();
     }, [decodedAge, slug]);
 
-    // Сброс при смене сцены
     useEffect(() => {
         log(`Переход на сцену ${currentScene}`);
         setDialogueIndex(0);
         setShowChoices(false);
         setIsTransitioning(false);
         if (transitionTimerRef.current) clearTimeout(transitionTimerRef.current);
-        // + сброс активного говорящего
         setActiveSpeaker('');
     }, [currentScene]);
 
-    // ~ Обновление левого, правого персонажа и активного говорящего при смене реплики
     useEffect(() => {
         const scene = storyData?.scenes?.[currentScene];
         if (!scene) return;
@@ -174,9 +192,13 @@ export default function StoryReader() {
             case 'withoutProtection': return !gameState.hasProtection;
             case 'withProtectionAndDropped': return gameState.hasProtection && gameState.phoneDropped;
             case 'withProtectionAndCaught': return gameState.hasProtection && !gameState.phoneDropped;
+            case 'withProtectionAndTripCancelled': return gameState.hasProtection && gameState.tripCancelled;
+            case 'withProtectionAndTripGoes': return gameState.hasProtection && !gameState.tripCancelled;
+            case 'withoutProtectionAndTripCancelled': return !gameState.hasProtection && gameState.tripCancelled;
+            case 'withoutProtectionAndTripGoes': return !gameState.hasProtection && !gameState.tripCancelled;
             default: return true;
         }
-    }, [storyData, currentScene, gameState.hasProtection, gameState.phoneDropped]);
+    }, [storyData, currentScene, gameState.hasProtection, gameState.phoneDropped, gameState.tripCancelled]);
 
     const getNextSceneIndex = useCallback((scene, state) => {
         if (!scene?.nextScene) return currentScene + 1;
@@ -289,7 +311,8 @@ export default function StoryReader() {
         let updatedState;
         setGameState(prev => {
             const newState = { ...prev };
-            if (choice.id === 'protection') {
+            // Поддержка разных ID покупки страховки
+            if (choice.id === 'protection' || choice.id === 'buyProtection') {
                 newState.budget -= choice.price;
                 newState.hasProtection = true;
                 newState.choices = [...prev.choices, choice.id];
@@ -324,10 +347,13 @@ export default function StoryReader() {
         setActiveGame(null);
         setGameState(prev => {
             const sceneIndex = currentScene;
+            const scene = storyData?.scenes[sceneIndex];
+            const isTripGame = scene?.miniGame?.affectsTripCancelled === true;
             return {
                 ...prev,
                 miniGameResults: { ...prev.miniGameResults, [sceneIndex]: result.success },
-                phoneDropped: (storyData?.scenes[sceneIndex]?.miniGame?.type === 'qte' && !result.success) ? true : prev.phoneDropped
+                phoneDropped: (!isTripGame && !result.success) ? true : prev.phoneDropped,
+                tripCancelled: (isTripGame && !result.success) ? true : prev.tripCancelled
             };
         });
         setDialogueIndex(0);
@@ -339,12 +365,20 @@ export default function StoryReader() {
         if (!scene?.choices) return null;
         if (Array.isArray(scene.choices)) return scene.choices;
         if (typeof scene.choices === 'object') {
+            // Простые ветки
+            if (gameState.hasProtection && scene.choices.withProtection) return scene.choices.withProtection;
+            if (!gameState.hasProtection && scene.choices.withoutProtection) return scene.choices.withoutProtection;
+            // Телефон
             if (gameState.hasProtection && gameState.phoneDropped && scene.choices.withProtectionAndDropped) return scene.choices.withProtectionAndDropped;
             if (gameState.hasProtection && !gameState.phoneDropped && scene.choices.withProtectionAndCaught) return scene.choices.withProtectionAndCaught;
-            if (!gameState.hasProtection && scene.choices.withoutProtection) return scene.choices.withoutProtection;
+            // Поездка
+            if (gameState.hasProtection && gameState.tripCancelled && scene.choices.withProtectionAndTripCancelled) return scene.choices.withProtectionAndTripCancelled;
+            if (gameState.hasProtection && !gameState.tripCancelled && scene.choices.withProtectionAndTripGoes) return scene.choices.withProtectionAndTripGoes;
+            if (!gameState.hasProtection && gameState.tripCancelled && scene.choices.withoutProtectionAndTripCancelled) return scene.choices.withoutProtectionAndTripCancelled;
+            if (!gameState.hasProtection && !gameState.tripCancelled && scene.choices.withoutProtectionAndTripGoes) return scene.choices.withoutProtectionAndTripGoes;
         }
         return null;
-    }, [storyData, currentScene, gameState.hasProtection, gameState.phoneDropped]);
+    }, [storyData, currentScene, gameState.hasProtection, gameState.phoneDropped, gameState.tripCancelled]);
 
     if (loading) return <section className="story-reader loading-state"><div className="loading-spinner">Загрузка истории...</div></section>;
     if (error || !storyData) return <section className="story-reader error-state"><div className="error-message"><h2>История не найдена</h2><p>{error || 'Неизвестная ошибка'}</p><button onClick={() => navigate(`/age/${decodedAge}/home`)}> Назад к историям</button></div></section>;
@@ -373,7 +407,7 @@ export default function StoryReader() {
                         </div>
                         <div className="complete-buttons">
                             <button className="complete-btn primary" data-icon="home" onClick={() => navigate(`/age/${decodedAge}/home`)}>В меню историй</button>
-                            <button className="complete-btn secondary" data-icon="restart" onClick={() => { setStoryComplete(false); setCurrentScene(0); setDialogueIndex(0); setGameState({ budget: storyData.budget || 3000, hasProtection: false, phoneDropped: false, miniGameResults: {}, choices: [] }); setRightCharacter(null); setLeftCharacter(null); setActiveSpeaker(''); }}>Начать заново</button>
+                            <button className="complete-btn secondary" data-icon="restart" onClick={() => { setStoryComplete(false); setCurrentScene(0); setDialogueIndex(0); setGameState({ budget: storyData.budget || 3000, hasProtection: false, phoneDropped: false, tripCancelled: false, miniGameResults: {}, choices: [] }); setRightCharacter(null); setLeftCharacter(null); setActiveSpeaker(''); }}>Начать заново</button>
                         </div>
                     </div>
                 </div>
@@ -396,7 +430,6 @@ export default function StoryReader() {
             <div className="story-bg" style={{ backgroundImage: bgImage ? `url(${bgImage})` : 'none' }}></div>
             {storyData.budget !== undefined && <PiggyBank budget={gameState.budget} />}
             <div className="characters-container">
-                {/* ~ изменено: используем leftCharacter и rightCharacter с классом active */}
                 {leftCharacter && (
                     <div className={`character left ${activeSpeaker === leftCharacter.name ? 'active' : ''} ${isTransitioning ? 'fade-out' : ''}`}>
                         <img src={leftCharacter.img} alt={leftCharacter.name} loading="lazy" />

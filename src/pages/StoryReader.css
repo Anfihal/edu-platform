@@ -42,7 +42,6 @@
     pointer-events: none;
     display: flex;
     justify-content: space-evenly;
-    /* равные отступы слева, между и справа */
     align-items: flex-end;
     padding: 0;
 }
@@ -72,9 +71,12 @@
     filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
 }
 
-/* Уменьшенный рост Льва и Сони на десктопе */
+/* Уменьшенный рост Льва, Сони, Лабрадора, Мурки и Бобика на десктопе */
 .character img[src*="lev/"],
-.character img[src*="sonya/"] {
+.character img[src*="sonya/"],
+.character img[src*="labrador/"],
+.character img[src*="murka/"],
+.character img[src*="bobik/"] {
     height: 70vh;
 }
 
@@ -86,24 +88,30 @@
 /* ===== ПЛАНШЕТЫ (до 768px) — ДВА ПЕРСОНАЖА ПО КРАЯМ ===== */
 @media (max-width: 768px) {
     .characters-container {
-        /* персонажи по краям */
+        justify-content: space-between;
         gap: 20%;
         padding: 0 0.5%;
     }
 
-    /* Все персонажи, кроме Льва и Сони, вырастают вверх */
-    .character:not(:has(img[src*="lev/"])):not(:has(img[src*="sonya/"])) {
+    /* Все персонажи, кроме уменьшенных, вырастают вверх */
+    .character:not(:has(img[src*="lev/"])):not(:has(img[src*="sonya/"])):not(:has(img[src*="labrador/"])):not(:has(img[src*="murka/"])):not(:has(img[src*="bobik/"])) {
         height: 100vh;
     }
 
-    /* Лев и Соня остаются маленькими */
+    /* Уменьшенные персонажи остаются маленькими */
     .character:has(img[src*="lev/"]),
-    .character:has(img[src*="sonya/"]) {
+    .character:has(img[src*="sonya/"]),
+    .character:has(img[src*="labrador/"]),
+    .character:has(img[src*="murka/"]),
+    .character:has(img[src*="bobik/"]) {
         height: 60vh;
     }
 
     .character img[src*="lev/"],
-    .character img[src*="sonya/"] {
+    .character img[src*="sonya/"],
+    .character img[src*="labrador/"],
+    .character img[src*="murka/"],
+    .character img[src*="bobik/"] {
         height: 60vh;
     }
 }
@@ -116,12 +124,10 @@
         padding: 0 !important;
     }
 
-    /* Скрываем всех, кроме активного */
     .character:not(.active) {
         display: none !important;
     }
 
-    /* Активный персонаж — гарантированно по центру */
     .characters-container .character.active {
         position: absolute !important;
         left: 50% !important;
@@ -137,7 +143,6 @@
         margin-right: 0 !important;
     }
 
-    /* Сбрасываем все боковые привязки */
     .character.left,
     .character.right {
         left: auto !important;
@@ -145,7 +150,6 @@
         justify-content: center !important;
     }
 
-    /* Изображение внутри активного персонажа */
     .character.active img {
         object-position: center bottom;
         width: 100%;
@@ -153,9 +157,12 @@
         max-height: 85vh;
     }
 
-    /* Для Льва и Сони (если они активны) убираем фиксированную высоту */
+    /* Для уменьшенных персонажей (если они активны) убираем фиксированную высоту */
     .character.active img[src*="lev/"],
-    .character.active img[src*="sonya/"] {
+    .character.active img[src*="sonya/"],
+    .character.active img[src*="labrador/"],
+    .character.active img[src*="murka/"],
+    .character.active img[src*="bobik/"] {
         height: auto;
         max-height: 75vh;
         width: 100%;

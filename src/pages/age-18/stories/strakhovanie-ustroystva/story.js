@@ -9,15 +9,15 @@
       title: '🏕️ Сборы',
       bg: 'images/stories/18+/pohod-s-tekhnikoy/room-bg.png',
       characters: [
-        { name: 'Максим', img: 'images/characters/maksim/maksim.png', side: 'left' },
+        { name: 'Дмитрий', img: 'images/characters/dmitry/dmitry.png', side: 'left' },
         { name: 'Михаил', img: 'images/characters/mikhail/mikhail.png', side: 'left' },
-        { name: 'Мария', img: 'images/characters/maria/maria.png', side: 'right' },
+        { name: 'София', img: 'images/characters/sofia/sofia.png', side: 'right' },
         { name: 'Анна', img: 'images/characters/anna/anna.png', side: 'right' }
       ],
       dialogues: [
-        { speaker: 'Максим', text: 'Так, народ, завтра в поход на три дня. Палатки, еда, вода — всё собрали?' },
+        { speaker: 'Дмитрий', text: 'Так, народ, завтра в поход на три дня. Палатки, еда, вода — всё собрали?' },
         { speaker: 'Михаил', text: 'Я ещё ноутбук возьму. Вечером фильмы смотреть будем, а на привале работать немного. У меня там движуха по проекту.' },
-        { speaker: 'Мария', text: 'Миша, ты с дуба рухнул? В поход с ноутом? Уронишь ещё где-нибудь в реку или разобьёшь.' },
+        { speaker: 'София', text: 'Миша, ты с дуба рухнул? В поход с ноутом? Уронишь ещё где-нибудь в реку или разобьёшь.' },
         { speaker: 'Анна', text: 'Кстати, о рисках. Я тут глянула — у «Хорошей страховой компании» есть полис «Мобильный». Страхует смартфоны, планшеты, ноутбуки от падений, краж, залития. Даже если сам разобьёшь — выплатят. Стоит около 10% от стоимости устройства.' }
       ],
       choices: [
@@ -30,15 +30,15 @@
       title: '🌲 В лесу',
       bg: 'images/stories/18+/pohod-s-tekhnikoy/forest-bg.png',
       characters: [
-        { name: 'Максим', img: 'images/characters/maksim/maksim.png', side: 'left' },
+        { name: 'Дмитрий', img: 'images/characters/dmitry/dmitry.png', side: 'left' },
         { name: 'Михаил', img: 'images/characters/mikhail/mikhail.png', side: 'left' },
-        { name: 'Мария', img: 'images/characters/maria/maria.png', side: 'right' },
+        { name: 'София', img: 'images/characters/sofia/sofia.png', side: 'right' },
         { name: 'Анна', img: 'images/characters/anna/anna.png', side: 'right' }
       ],
       dialogues: [
-        { speaker: 'Мария', text: 'Красота! Воздух, сосны, тишина...' },
+        { speaker: 'София', text: 'Красота! Воздух, сосны, тишина...' },
         { speaker: 'Михаил', text: 'И ни одного розетки. Надеюсь, моего пауэрбанка хватит.' },
-        { speaker: 'Максим', text: 'Ладно, давайте ставить лагерь. Место отличное.' },
+        { speaker: 'Дмитрий', text: 'Ладно, давайте ставить лагерь. Место отличное.' },
         { speaker: 'Анна', text: 'Только вы с техникой поаккуратнее. Помните, у кого страховка, а кто — жадина-говядина.' }
       ],
       choices: [
@@ -51,11 +51,11 @@
       bg: 'images/stories/18+/pohod-s-tekhnikoy/campfire-bg.png',
       characters: [
         { name: 'Михаил', img: 'images/characters/mikhail/mikhail.png', side: 'left' },
-        { name: 'Максим', img: 'images/characters/maksim/maksim.png', side: 'right' }
+        { name: 'Дмитрий', img: 'images/characters/dmitry/dmitry.png', side: 'right' }
       ],
       dialogues: [
         { speaker: 'Михаил', text: 'Так, сейчас кино посмотрим. У меня тут "Джентльмены" закачаны. Классика.' },
-        { speaker: 'Максим', text: 'Только не урони в костёр, гений.' }
+        { speaker: 'Дмитрий', text: 'Только не урони в костёр, гений.' }
       ],
       miniGame: {
         type: 'qte',
@@ -65,11 +65,11 @@
       dialoguesAfterGame: {
         success: [
           { speaker: 'Михаил', text: 'Фух! Удержал! Чуть не поседел.' },
-          { speaker: 'Максим', text: 'Видишь, надо было страховку брать. Если бы упал — был бы ноут без экрана.' }
+          { speaker: 'Дмитрий', text: 'Видишь, надо было страховку брать. Если бы упал — был бы ноут без экрана.' }
         ],
         fail: [
           { speaker: 'Михаил', text: 'БЛ...! Экран вдребезги!' },
-          { speaker: 'Максим', text: 'Ну вот. А я предупреждал. Теперь либо страховка, либо ты без ноута.' }
+          { speaker: 'Дмитрий', text: 'Ну вот. А я предупреждал. Теперь либо страховка, либо ты без ноута.' }
         ]
       }
     },
@@ -79,11 +79,11 @@
       bg: 'images/stories/18+/pohod-s-tekhnikoy/forest-night-bg.png',
       characters: [
         { name: 'Анна', img: 'images/characters/anna/anna.png', side: 'left' },
-        { name: 'Мария', img: 'images/characters/maria/maria.png', side: 'right' }
+        { name: 'София', img: 'images/characters/sofia/sofia.png', side: 'right' }
       ],
       dialogues: [
         { speaker: 'Анна', text: 'Девочки, вы мой телефон не видели? Я его на бревне оставила, пока за водой ходила.' },
-        { speaker: 'Мария', text: 'Смотри! Там кто-то убегает! Это же тот турист из соседнего лагеря!' }
+        { speaker: 'София', text: 'Смотри! Там кто-то убегает! Это же тот турист из соседнего лагеря!' }
       ],
       miniGame: {
         type: 'qte',
@@ -92,11 +92,11 @@
       },
       dialoguesAfterGame: {
         success: [
-          { speaker: 'Максим', text: 'Поймали! Вот твой телефон, Ань. А товарища сейчас полиции сдадим.' },
+          { speaker: 'Дмитрий', text: 'Поймали! Вот твой телефон, Ань. А товарища сейчас полиции сдадим.' },
           { speaker: 'Анна', text: 'Спасибо! Я уж думала, прощайся с новым айфоном.' }
         ],
         fail: [
-          { speaker: 'Максим', text: 'Убежал, гад. В темноте не догнать.' },
+          { speaker: 'Дмитрий', text: 'Убежал, гад. В темноте не догнать.' },
           { speaker: 'Анна', text: 'Вот чёрт. Телефон новый, жалко.' }
         ]
       }
@@ -106,18 +106,18 @@
       title: '📞 Звонок в страховую',
       bg: 'images/stories/18+/pohod-s-tekhnikoy/tent-bg.png',
       characters: [
-        { name: 'Мария', img: 'images/characters/maria/maria.png', side: 'left' },
-        { name: 'Максим', img: 'images/characters/maksim/maksim.png', side: 'right' }
+        { name: 'София', img: 'images/characters/sofia/sofia.png', side: 'left' },
+        { name: 'Дмитрий', img: 'images/characters/dmitry/dmitry.png', side: 'right' }
       ],
       dialogues: {
         withProtection: [
-          { speaker: 'Мария', text: 'Так, я позвонила в «Хорошей страховой компании». Они сказали, что падение ноутбука и кража телефона — страховые случаи. Надо будет приложить фото и заявление в полицию по краже. Выплатят по чеку, если не прошло года.' },
-          { speaker: 'Максим', text: 'Ну хоть что-то. Миша, Аня, с вас магарыч. Мы из-за вас чуть без техники не остались.' },
+          { speaker: 'София', text: 'Так, я позвонила в «Хорошей страховой компании». Они сказали, что падение ноутбука и кража телефона — страховые случаи. Надо будет приложить фото и заявление в полицию по краже. Выплатят по чеку, если не прошло года.' },
+          { speaker: 'Дмитрий', text: 'Ну хоть что-то. Миша, Аня, с вас магарыч. Мы из-за вас чуть без техники не остались.' },
           { speaker: 'Михаил', text: 'Ладно-ладно, проставляюсь. И страховку теперь всегда буду оформлять.' }
         ],
         withoutProtection: [
-          { speaker: 'Мария', text: 'Без страховки — сами виноваты. Ремонт ноутбука тысяч 20 встанет, и телефон новый покупать.' },
-          { speaker: 'Максим', text: 'Жёстко. В следующий раз будете умнее. А пока — гуляем за свой счёт.' }
+          { speaker: 'София', text: 'Без страховки — сами виноваты. Ремонт ноутбука тысяч 20 встанет, и телефон новый покупать.' },
+          { speaker: 'Дмитрий', text: 'Жёстко. В следующий раз будете умнее. А пока — гуляем за свой счёт.' }
         ]
       },
       choices: [
@@ -148,20 +148,20 @@
       title: '🏆 Отдых удался',
       bg: 'images/stories/18+/pohod-s-tekhnikoy/lake-bg.png',
       characters: [
-        { name: 'Максим', img: 'images/characters/maksim/maksim.png', side: 'left' },
+        { name: 'Дмитрий', img: 'images/characters/dmitry/dmitry.png', side: 'left' },
         { name: 'Михаил', img: 'images/characters/mikhail/mikhail.png', side: 'left' },
-        { name: 'Мария', img: 'images/characters/maria/maria.png', side: 'right' },
+        { name: 'София', img: 'images/characters/sofia/sofia.png', side: 'right' },
         { name: 'Анна', img: 'images/characters/anna/anna.png', side: 'right' }
       ],
       dialogues: {
         withProtection: [
-          { speaker: 'Максим', text: 'Ну что, народ, приключения закончились, техника цела, нервы — не очень. Но зато мы теперь знаем: страховка — реально полезная штука.' },
-          { speaker: 'Мария', text: '«Хорошей страховой компании» не подвёл. Всё выплатили, как обещали. Даже фотоосмотр не потребовался, когда чек есть.' },
+          { speaker: 'Дмитрий', text: 'Ну что, народ, приключения закончились, техника цела, нервы — не очень. Но зато мы теперь знаем: страховка — реально полезная штука.' },
+          { speaker: 'София', text: '«Хорошей страховой компании» не подвёл. Всё выплатили, как обещали. Даже фотоосмотр не потребовался, когда чек есть.' },
           { speaker: 'Михаил', text: 'Ладно, в следующем походе беру только защищённый ноут и страховку. И никаких фильмов у костра.' },
           { speaker: 'Анна', text: 'А я теперь телефон из рук не выпускаю. И вам советую.' }
         ],
         withoutProtection: [
-          { speaker: 'Максим', text: 'Ну что, это был самый дорогой поход в нашей жизни. Но зато мы поняли, что на страховке экономить нельзя.' },
+          { speaker: 'Дмитрий', text: 'Ну что, это был самый дорогой поход в нашем жизни. Но зато мы поняли, что на страховке экономить нельзя.' },
           { speaker: 'Анна', text: 'В следующий раз — только с полисом. И технику в палатке оставлять под замком.' }
         ]
       },
